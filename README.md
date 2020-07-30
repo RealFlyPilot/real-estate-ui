@@ -34,30 +34,3 @@ class Example extends Component {
   lg: 980,
   xl: 1280
 }</textarea><pre aria-hidden="true" style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: relative; pointer-events: none; padding: 20px;"><div class="token-line" style="color: rgb(214, 222, 235);"><span class="token plain">theme</span><span class="token punctuation" style="color: rgb(199, 146, 234);">.</span><span class="token plain">breakpoints </span><span class="token operator" style="color: rgb(127, 219, 202);">=</span><span class="token plain"> </span><span class="token punctuation" style="color: rgb(199, 146, 234);">{</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(214, 222, 235);"><span class="token plain">  xs</span><span class="token punctuation" style="color: rgb(199, 146, 234);">:</span><span class="token plain"> </span><span class="token number" style="color: rgb(247, 140, 108);">0</span><span class="token punctuation" style="color: rgb(199, 146, 234);">,</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(214, 222, 235);"><span class="token plain">  sm</span><span class="token punctuation" style="color: rgb(199, 146, 234);">:</span><span class="token plain"> </span><span class="token number" style="color: rgb(247, 140, 108);">480</span><span class="token punctuation" style="color: rgb(199, 146, 234);">,</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(214, 222, 235);"><span class="token plain">  md</span><span class="token punctuation" style="color: rgb(199, 146, 234);">:</span><span class="token plain"> </span><span class="token number" style="color: rgb(247, 140, 108);">736</span><span class="token punctuation" style="color: rgb(199, 146, 234);">,</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(214, 222, 235);"><span class="token plain">  lg</span><span class="token punctuation" style="color: rgb(199, 146, 234);">:</span><span class="token plain"> </span><span class="token number" style="color: rgb(247, 140, 108);">980</span><span class="token punctuation" style="color: rgb(199, 146, 234);">,</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(214, 222, 235);"><span class="token plain">  xl</span><span class="token punctuation" style="color: rgb(199, 146, 234);">:</span><span class="token plain"> </span><span class="token number" style="color: rgb(247, 140, 108);">1280</span><span class="token plain"></span></div><div class="token-line" style="color: rgb(214, 222, 235);"><span class="token plain"></span><span class="token punctuation" style="color: rgb(199, 146, 234);">}</span></div></pre><style type="text/css">
-/**
- * Reset the text fill color so that placeholder is visible
- */
-.npm__react-simple-code-editor__textarea:empty {
-  -webkit-text-fill-color: inherit !important;
-}
-
-/\*\*
-
-- Hack to apply on some CSS on IE10 and IE11
-  _/
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /\*\*
-  _ IE doesn't support '-webkit-text-fill-color'
-  _ So we use 'color: transparent' to make the text transparent on IE
-  _ Unlike other browsers, it doesn't affect caret color in IE
-  \*/
-  .npm**react-simple-code-editor**textarea {
-  color: transparent !important;
-  }
-
-.npm**react-simple-code-editor**textarea::selection {
-background-color: #accef7 !important;
-color: transparent !important;
-}
-}
-</style></div><button type="button" class="sc-qQYBZ jWMeLx">Copy</button></div></div><h2 class="sc-pzMyG jOczML  wui-text">Example</h2><pre class="sc-qOiPt iYkHAj"><div class="sc-AxjAm sc-pscky sc-pdKru ktmuvJ sc-qbELi hyrBIt codeEditor"><div class="sc-AxjAm sc-pscky sc-pmjZF kIoryb"><div><div class="sc-pcZmk fxYYyx"><div class="sc-AxjAm sc-pscky fwZaif">Resize screen to change this Box 🌝</div></div></div><div class="sc-oVcyR jTScQS">
