@@ -8,15 +8,18 @@
     "sourceMap": true,
     "declaration": true,
     "esModuleInterop": true,
+    "isolatedModules": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "noImplicitAny": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false
   },
+
   "include": ["src"],
   "exclude": ["node_modules", "dist", "example"]
 }
