@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { TimePicker as WelcomeTimePicker} from '@welcome-ui/time-picker';
+import { TimePicker as BaseTimePicker } from '@welcome-ui/time-picker'
 
+export interface TimePickerProps {}
 
-export interface TimePickerProps  {
-              
-}
-      
 export const TimePicker: React.SFC<TimePickerProps> = (props) => {
-    return (
-        <WelcomeTimePicker {...props} />
-        
-    );
+  return <BaseTimePicker {...props} />
 }
-      

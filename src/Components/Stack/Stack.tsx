@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { Stack as WelcomeStack} from '@welcome-ui/stack';
+import { Stack as BaseStack } from '@welcome-ui/stack'
 
+export interface StackProps {}
 
-export interface StackProps  {
-              
-}
-      
 export const Stack: React.SFC<StackProps> = (props) => {
-    return (
-        <WelcomeStack {...props} />
-        
-    );
+  return <BaseStack {...props} />
 }
-      

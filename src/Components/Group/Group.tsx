@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { Group as WelcomeGroup } from '@welcome-ui/group'
+import { Group as BaseGroup } from '@welcome-ui/group'
 
 export interface GroupProps {
   children: any
@@ -10,8 +10,8 @@ export interface GroupProps {
 
 export const Group: React.SFC<GroupProps> = ({ children, variant, size }) => {
   return (
-    <WelcomeGroup variant={variant} size={size}>
+    <BaseGroup variant={variant} size={size}>
       {children}
-    </WelcomeGroup>
+    </BaseGroup>
   )
 }

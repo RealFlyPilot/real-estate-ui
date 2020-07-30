@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { FileDrop as WelcomeFileDrop} from '@welcome-ui/file-drop';
+import { FileDrop as BaseFileDrop } from '@welcome-ui/file-drop'
 
+export interface FileDropProps {}
 
-export interface FileDropProps  {
-              
-}
-      
 export const FileDrop: React.SFC<FileDropProps> = (props) => {
-    return (
-        <WelcomeFileDrop {...props} />
-        
-    );
+  return <BaseFileDrop {...props} />
 }
-      

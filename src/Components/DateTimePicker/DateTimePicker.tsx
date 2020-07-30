@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { DateTimePicker as WelcomeDateTimePicker} from '@welcome-ui/date-time-picker';
+import { DateTimePicker as BaseDateTimePicker } from '@welcome-ui/date-time-picker'
 
+export interface DateTimePickerProps {}
 
-export interface DateTimePickerProps  {
-              
-}
-      
 export const DateTimePicker: React.SFC<DateTimePickerProps> = (props) => {
-    return (
-        <WelcomeDateTimePicker {...props} />
-        
-    );
+  return <BaseDateTimePicker {...props} />
 }
-      

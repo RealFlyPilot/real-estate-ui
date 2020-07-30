@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { Toast as WelcomeToast} from '@welcome-ui/toast';
+import { Toast as BaseToast } from '@welcome-ui/toast'
 
+export interface ToastProps {}
 
-export interface ToastProps  {
-              
-}
-      
 export const Toast: React.SFC<ToastProps> = (props) => {
-    return (
-        <WelcomeToast {...props} />
-        
-    );
+  return <BaseToast {...props} />
 }
-      

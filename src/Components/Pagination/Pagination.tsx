@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { Pagination as WelcomePagination} from '@welcome-ui/pagination';
+import { Pagination as BasePagination } from '@welcome-ui/pagination'
 
+export interface PaginationProps {}
 
-export interface PaginationProps  {
-              
-}
-      
 export const Pagination: React.SFC<PaginationProps> = (props) => {
-    return (
-        <WelcomePagination {...props} />
-        
-    );
+  return <BasePagination {...props} />
 }
-      

@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { InputText as WelcomeInputText} from '@welcome-ui/input-text';
+import { InputText as BaseInputText } from '@welcome-ui/input-text'
 
+export interface InputTextProps {}
 
-export interface InputTextProps  {
-              
-}
-      
 export const InputText: React.SFC<InputTextProps> = (props) => {
-    return (
-        <WelcomeInputText {...props} />
-        
-    );
+  return <BaseInputText {...props} />
 }
-      

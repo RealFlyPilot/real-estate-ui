@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { useCopyText as WelcomeuseCopyText} from '@welcome-ui/utils.copy';
+import { useCopyText as BaseuseCopyText } from '@welcome-ui/utils.copy'
 
+export interface useCopyTextProps {}
 
-export interface useCopyTextProps  {
-              
-}
-      
 export const useCopyText: React.SFC<useCopyTextProps> = (props) => {
-    return (
-        <WelcomeuseCopyText {...props} />
-        
-    );
+  return <BaseuseCopyText {...props} />
 }
-      

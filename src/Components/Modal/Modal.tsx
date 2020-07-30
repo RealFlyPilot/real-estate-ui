@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { Modal as WelcomeModal} from '@welcome-ui/modal';
+import { Modal as BaseModal } from '@welcome-ui/modal'
 
+export interface ModalProps {}
 
-export interface ModalProps  {
-              
-}
-      
 export const Modal: React.SFC<ModalProps> = (props) => {
-    return (
-        <WelcomeModal {...props} />
-        
-    );
+  return <BaseModal {...props} />
 }
-      

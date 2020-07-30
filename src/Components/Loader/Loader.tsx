@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { Loader as WelcomeLoader} from '@welcome-ui/loader';
+import { Loader as BaseLoader } from '@welcome-ui/loader'
 
+export interface LoaderProps {}
 
-export interface LoaderProps  {
-              
-}
-      
 export const Loader: React.SFC<LoaderProps> = (props) => {
-    return (
-        <WelcomeLoader {...props} />
-        
-    );
+  return <BaseLoader {...props} />
 }
-      

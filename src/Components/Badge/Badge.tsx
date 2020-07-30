@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { Badge as WelcomeBadge} from '@welcome-ui/badge';
+import { Badge as BaseBadge } from '@welcome-ui/badge'
 
+export interface BadgeProps {}
 
-export interface BadgeProps  {
-              
-}
-      
 export const Badge: React.SFC<BadgeProps> = (props) => {
-    return (
-        <WelcomeBadge {...props} />
-        
-    );
+  return <BaseBadge {...props} />
 }
-      

@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { Checkbox as WelcomeCheckbox} from '@welcome-ui/checkbox';
+import { Checkbox as BaseCheckbox } from '@welcome-ui/checkbox'
 
+export interface CheckboxProps {}
 
-export interface CheckboxProps  {
-              
-}
-      
 export const Checkbox: React.SFC<CheckboxProps> = (props) => {
-    return (
-        <WelcomeCheckbox {...props} />
-        
-    );
+  return <BaseCheckbox {...props} />
 }
-      

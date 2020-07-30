@@ -1,8 +1,11 @@
 import * as React from 'react'
+import { Accordion as BaseAccordion } from '@welcome-ui/accordion'
+import { Icons } from '../Icon'
+import { BaseComponentStylePropType } from '../../types/base.types'
 
-import { Accordion as WelcomeAccordion } from '@welcome-ui/accordion'
+const { RightIcon } = Icons
 
-export interface AccordionProps {
+export interface AccordionProps extends BaseComponentStylePropType {
   title?: any
   children?: any
   visible?: boolean
@@ -12,11 +15,12 @@ export interface AccordionProps {
 export const Accordion: React.SFC<AccordionProps> = ({
   title,
   children,
+  icon = <RightIcon size='sm' />,
   ...rest
 }) => {
   return (
-    <WelcomeAccordion title={title} {...rest}>
+    <BaseAccordion title={title} {...rest}>
       {children}
-    </WelcomeAccordion>
+    </BaseAccordion>
   )
 }

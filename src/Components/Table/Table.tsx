@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { Table as WelcomeTable} from '@welcome-ui/table';
+import { Table as BaseTable } from '@welcome-ui/table'
 
+export interface TableProps {}
 
-export interface TableProps  {
-              
-}
-      
 export const Table: React.SFC<TableProps> = (props) => {
-    return (
-        <WelcomeTable {...props} />
-        
-    );
+  return <BaseTable {...props} />
 }
-      

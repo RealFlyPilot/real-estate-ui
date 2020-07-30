@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { MarkdownEditor as WelcomeMarkdownEditor} from '@welcome-ui/markdown-editor';
+import { MarkdownEditor as BaseMarkdownEditor } from '@welcome-ui/markdown-editor'
 
+export interface MarkdownEditorProps {}
 
-export interface MarkdownEditorProps  {
-              
-}
-      
 export const MarkdownEditor: React.SFC<MarkdownEditorProps> = (props) => {
-    return (
-        <WelcomeMarkdownEditor {...props} />
-        
-    );
+  return <BaseMarkdownEditor {...props} />
 }
-      

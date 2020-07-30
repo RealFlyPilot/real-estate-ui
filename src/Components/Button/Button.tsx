@@ -1,8 +1,8 @@
 import * as React from 'react'
+import { BaseComponentStylePropType } from '../../types/base.types'
+import { Button as BaseButton } from '@welcome-ui/button'
 
-import { Button as WelcomeButton } from '@welcome-ui/button'
-
-export interface ButtonProps {
+export interface ButtonProps extends BaseComponentStylePropType {
   variant?: string
   children?: any
 }
@@ -13,8 +13,8 @@ export const Button: React.SFC<ButtonProps> = ({
   ...rest
 }) => {
   return (
-    <WelcomeButton variant={variant} {...rest}>
+    <BaseButton variant={variant} {...rest}>
       {children}
-    </WelcomeButton>
+    </BaseButton>
   )
 }

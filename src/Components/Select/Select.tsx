@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { Select as WelcomeSelect} from '@welcome-ui/select';
+import { Select as BaseSelect } from '@welcome-ui/select'
 
+export interface SelectProps {}
 
-export interface SelectProps  {
-              
-}
-      
 export const Select: React.SFC<SelectProps> = (props) => {
-    return (
-        <WelcomeSelect {...props} />
-        
-    );
+  return <BaseSelect {...props} />
 }
-      

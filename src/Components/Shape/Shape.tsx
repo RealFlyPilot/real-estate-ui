@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { Shape as WelcomeShape} from '@welcome-ui/shape';
+import { Shape as BaseShape } from '@welcome-ui/shape'
 
+export interface ShapeProps {}
 
-export interface ShapeProps  {
-              
-}
-      
 export const Shape: React.SFC<ShapeProps> = (props) => {
-    return (
-        <WelcomeShape {...props} />
-        
-    );
+  return <BaseShape {...props} />
 }
-      

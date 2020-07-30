@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { Swiper as WelcomeSwiper} from '@welcome-ui/swiper';
+import { Swiper as BaseSwiper } from '@welcome-ui/swiper'
 
+export interface SwiperProps {}
 
-export interface SwiperProps  {
-              
-}
-      
 export const Swiper: React.SFC<SwiperProps> = (props) => {
-    return (
-        <WelcomeSwiper {...props} />
-        
-    );
+  return <BaseSwiper {...props} />
 }
-      

@@ -21,7 +21,10 @@
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "gh-pages -d example/build",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "docz:serve": "docz build && docz serve"
   },
   "dependencies": {
     "@types/styled-components": "^5.1.1",
@@ -71,6 +74,7 @@
     "@welcome-ui/utils.copy": "^2.0.0",
     "@xstyled/styled-components": "^1.17.2",
     "@xstyled/system": "^1.17.2",
+    "docz": "^2.3.1",
     "styled-components": "^5.1.1"
   },
   "peerDependencies": {

@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
+import { BaseComponentStylePropType } from '../../types/base.types'
+import { Card as BaseCard } from '@welcome-ui/card'
 
-import { Card as WelcomeCard} from '@welcome-ui/card';
+export interface CardProps extends BaseComponentStylePropType {}
 
-
-export interface CardProps  {
-              
-}
-      
 export const Card: React.SFC<CardProps> = (props) => {
-    return (
-        <WelcomeCard {...props} />
-        
-    );
+  return <BaseCard {...props} />
 }
-      

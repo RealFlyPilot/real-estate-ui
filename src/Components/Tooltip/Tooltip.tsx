@@ -1,16 +1,9 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { Tooltip as WelcomeTooltip} from '@welcome-ui/tooltip';
+import { Tooltip as BaseTooltip } from '@welcome-ui/tooltip'
 
+export interface TooltipProps {}
 
-export interface TooltipProps  {
-              
-}
-      
 export const Tooltip: React.SFC<TooltipProps> = (props) => {
-    return (
-        <WelcomeTooltip {...props} />
-        
-    );
+  return <BaseTooltip {...props} />
 }
-      
