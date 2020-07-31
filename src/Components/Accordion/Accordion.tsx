@@ -1,9 +1,13 @@
 import * as React from 'react'
 import { Accordion as BaseAccordion } from '@welcome-ui/accordion'
-import { Icons } from '../Icon'
 import { BaseComponentStylePropType } from '../../types/base.types'
+import * as icons from '@welcome-ui/icons'
 
-const { RightIcon } = Icons
+const iconObj: any = {
+  ...icons
+}
+
+const { RightIcon } = iconObj
 
 export interface AccordionProps extends BaseComponentStylePropType {
   title?: any

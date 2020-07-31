@@ -11,7 +11,6 @@ import { Avatar } from './Components/Avatar'
 import { Badge } from './Components/Badge'
 import { Breadcrumb } from './Components/Breadcrumb'
 import { Group } from './Components/Group'
-import { Icons } from './Components/Icon'
 import { Link } from './Components/Link'
 import { Loader } from './Components/Loader'
 import { Modal } from './Components/Modal'
@@ -54,7 +53,6 @@ export {
   Badge,
   Breadcrumb,
   Group,
-  Icons,
   Link,
   Loader,
   Modal,
@@ -84,3 +82,5 @@ export {
   Tooltip,
   ThemeProvider
 }
+
+export * from './Components/Icon'

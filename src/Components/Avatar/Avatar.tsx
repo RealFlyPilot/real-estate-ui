@@ -1,18 +1,11 @@
 import * as React from 'react'
-
+import { BaseComponentStylePropType } from '../../types/base.types'
 import { Avatar as BaseAvatar } from '@welcome-ui/avatar'
 
-export interface AvatarProps {
+export interface AvatarProps extends BaseComponentStylePropType {
   src?: any
-  name?: any
-  width?: any
-  height?: any
-  color?: any
-  fontSize?: any
-  mr?: any
-  mt?: any
-  ml?: any
-  mb?: any
+  name: any
+  size?: any
 }
 
 export const Avatar: React.SFC<AvatarProps> = (props) => {

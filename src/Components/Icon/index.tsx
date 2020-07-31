@@ -1,1 +1,1 @@
-export { Icons } from './Icon'
+export * from '@welcome-ui/icons'
