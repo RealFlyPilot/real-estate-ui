@@ -48,3 +48,5 @@ npm install --save real-estate-ui
 ### Documentation
 
 [Component Docs](src/docs/components)
+
+"prepare": "run-s build",
