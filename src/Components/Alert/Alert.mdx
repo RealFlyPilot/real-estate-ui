@@ -4,9 +4,7 @@ import { Box } from '../Box'
 import { Avatar } from '../Avatar'
 import { Text } from '../Text'
 
-<Meta title='MDX/Accordion' component={Accordion} />
-
-# Accordion
+<Meta title='MDX/Alert' component={Alert} />
 
 # Alert
 
@@ -44,47 +42,5 @@ The default is `error`.
     Nunc laoreet egestas nulla, et dapibus sem malesuada in. Suspendisse eleifend accumsan
     ultrices. Phasellus iaculis nisi sed dui ornare commodo. Nullam dapibus varius nibh a ornare.
   </span>
-</Alert>
-```
-
-## With only Alert.Title
-
-We're adding an icon matching the `variant` (see above examples) but you can remove it or add a custom node instead
-
-```jsx
-<Alert>
-  <Alert.Title>Welcome to the jungle</Alert.Title>
-</Alert>
-<Alert>
-  <Alert.Title icon={<HeartIcon />}>Welcome to the jungle</Alert.Title>
-</Alert>
-<Alert>
-  <Alert.Title icon="😵">Welcome to the jungle</Alert.Title>
-</Alert>
-<Alert>
-  <Alert.Title icon={null}>Welcome to the jungle</Alert.Title>
-</Alert>
-```
-
-## With Button
-
-When usin `Alert.Button`, we will show it in a column on the right
-
-```jsx
-<Alert>
-  <Alert.Title>Welcome to the jungle</Alert.Title>
-  <span>
-    Nunc laoreet egestas nulla, et dapibus sem malesuada in. Suspendisse
-    eleifend accumsan ultrices. Phasellus iaculis nisi sed dui ornare commodo.
-    Nullam dapibus varius nibh a ornare.
-  </span>
-  <Alert.Button variant='secondary'>Button</Alert.Button>
-</Alert>
-```
-
-```jsx
-<Alert>
-  <Alert.Title>Welcome to the jungle</Alert.Title>
-  <Alert.Button variant='secondary'>Button</Alert.Button>
 </Alert>
 ```

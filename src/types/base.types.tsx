@@ -110,4 +110,5 @@ export type BaseComponentStylePropType = {
   opacity?: string | number
   overflow?: string | number
   transition?: string | number
+  position?: string
 }

@@ -42,6 +42,15 @@ export { Breadcrumb }
 
 ```
 
+stories: ['../src/**/*.stories.(tsx|mdx)'],
+find . -name "\*.doc.mdx" -exec bash -c 'mv "$1" "${1%.doc.mdx}".mdx' - '{}' \;
+
+find ./src/Components/\*_ -type f -name '_.doc' -exec rename 's/\.doc\$/''/' '{}' \;
+
+➜ find ./src/Components/\*_ -name '_.d.ts' -delete
+
+➜ find ./src/\*_/_.md -type f -empty -print -delete
+
 These both seem far from ideal but the second way seems particularly worse. Since the underlying component already has sub components mapped to its properties of the same name, to define those same properties on the wrapper component
 seems redundant and likely to cause bloat. **Would like a second pair of eyes on this**
 
