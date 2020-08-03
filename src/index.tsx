@@ -13,11 +13,12 @@ import { Breadcrumb } from './Components/Breadcrumb'
 import { Group } from './Components/Group'
 import { Link } from './Components/Link'
 import { Loader } from './Components/Loader'
-import { Modal } from './Components/Modal'
+import { Modal, useModalState } from './Components/Modal'
 import { Swiper } from './Components/Swiper'
 import { Table } from './Components/Table'
 import { Pagination } from './Components/Pagination'
 import { Text } from './Components/Text'
+import { Label } from './Components/Label'
 // import { Tabs } from './Components/Tabs'
 import { Tag } from './Components/Tag'
 import { Toast } from './Components/Toast'
@@ -57,6 +58,7 @@ export {
   Link,
   Loader,
   Modal,
+  useModalState,
   Swiper,
   Table,
   Pagination,
@@ -78,6 +80,7 @@ export {
   useCopyText,
   // Tabs,
   Text,
+  Label,
   Tag,
   Toast,
   Tooltip,

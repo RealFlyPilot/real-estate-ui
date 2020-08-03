@@ -5,7 +5,7 @@ import { icons } from '../Icon'
 
 const { HeartIcon } = icons
 
-export default { title: 'Alert' }
+export default { title: 'Alert', component: Alert }
 
 export const Examples = () => (
   <Box>

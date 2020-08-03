@@ -1,8 +1,14 @@
-import * as React from 'react';
-  import { Hint } from './Hint';
+import * as React from 'react'
+import { Hint } from './Hint'
 
-  
-  export default { title: 'Hint' };
-  
-  export const HintFirstStory = () => <Hint />;
-  
+export default { title: 'Hint' }
+
+export const HintFirstStory = () => (
+  <div>
+    <Hint>default</Hint>
+    <Hint variant='warning'>warning</Hint>
+    <Hint variant='error'>error</Hint>
+    <Hint variant='info'>info</Hint>
+    <Hint variant='success'>success</Hint>
+  </div>
+)

@@ -5,6 +5,7 @@ import { Button as BaseButton } from '@welcome-ui/button'
 export interface ButtonProps extends BaseComponentStylePropType {
   variant?: string
   children?: any
+  onClick?: Function
 }
 
 export const Button: React.SFC<ButtonProps> = ({
