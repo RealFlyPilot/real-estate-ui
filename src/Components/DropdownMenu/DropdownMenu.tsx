@@ -4,7 +4,6 @@ import {
   useDropdownMenuState
 } from '@welcome-ui/dropdown-menu'
 import { BaseComponentStylePropType } from '../../types/base.types'
-
 export interface DropdownMenuProps extends BaseComponentStylePropType {
   children?: any
 }
