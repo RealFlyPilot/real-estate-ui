@@ -41,10 +41,10 @@ export type BaseComponentStylePropType = {
   display?: string | number
   width?: string | number
   height?: string | number
-  maxWidth?: string | number
-  maxHeight?: string | number
+  maxWidth?: any
+  maxHeight?: any
   minWidth?: string | number
-  minHeight?: string | number
+  minHeight?: any
   size?: string | number
   verticalAlign?: string | number
   layout?: string | number

@@ -6,6 +6,7 @@ export interface ButtonProps extends BaseComponentStylePropType {
   variant?: string
   children?: any
   onClick?: Function
+  type?: string
 }
 
 export const Button: React.SFC<ButtonProps> = ({

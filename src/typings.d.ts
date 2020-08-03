@@ -18,6 +18,9 @@ declare module '*.svg' {
   export { svgComponent as ReactComponent }
 }
 
+declare module 'real-estate-ui' {
+  export { Button } from './Components/Button'
+}
 declare module '@welcome-ui'
 declare module '@welcome-ui/core'
 declare module '@welcome-ui/input-text'
