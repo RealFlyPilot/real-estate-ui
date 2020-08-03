@@ -19,7 +19,8 @@ import { Table } from './Components/Table'
 import { Pagination } from './Components/Pagination'
 import { Text } from './Components/Text'
 import { Label } from './Components/Label'
-// import { Tabs } from './Components/Tabs'
+import { ConnectedField, Form } from './Components/Form'
+import { useTabState, Tab } from './Components/Tabs'
 import { Tag } from './Components/Tag'
 import { Toast } from './Components/Toast'
 import { Tooltip } from './Components/Tooltip'
@@ -38,7 +39,6 @@ import { Textarea } from './Components/Textarea'
 import { TimePicker } from './Components/TimePicker'
 import { Toggle } from './Components/Toggle'
 import { useCopyText } from './Components/useCopyText'
-// export { useTabState } from '@welcome-ui/tabs'
 import { ThemeProvider } from './Theme/ThemeProvider'
 
 export {
@@ -78,7 +78,10 @@ export {
   TimePicker,
   Toggle,
   useCopyText,
-  // Tabs,
+  useTabState,
+  Tab,
+  ConnectedField,
+  Form,
   Text,
   Label,
   Tag,

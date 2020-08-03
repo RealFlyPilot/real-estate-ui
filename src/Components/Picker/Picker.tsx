@@ -1,9 +1,29 @@
 import * as React from 'react'
-
+import { BaseComponentStylePropTypes } from '../../types/base.types'
 import { Picker as BasePicker } from '@welcome-ui/picker'
 
-export interface PickerProps {}
-
-export const Picker: React.SFC<PickerProps> = (props) => {
-  return <BasePicker {...props} />
+export interface PickerProps extends BaseComponentStylePropTypes {
+  name?: string
+  label?: string
+  required?: boolean
+  options?: any
 }
+
+export const Picker: React.SFC<PickerProps> = BasePicker
+
+// ({
+//   name,
+//   label,
+//   required,
+//   options
+// }) => {
+//   return (
+//     <ConnectedField
+//       component={BasePicker}
+//       options={options}
+//       name={name}
+//       label={label}
+//       required={required}
+//     />
+//   )
+// }

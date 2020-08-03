@@ -53,12 +53,8 @@ npm install --save real-estate-ui
 
 ## Status
 
-### To Do
-
-[ ] - Define Custom Component APIs
-[ ] - Mitigate the presence of both xStyledComponent and StyledComponents
-
-### Issues
+- [ ] Define Custom Component APIs
+- [x] Mitigate the presence of both xStyledComponent and StyledComponents
 
 **
 Currently experiencing issues with properly defining and exporting our own custom components when the base WelcomeUI components that they wrap internally have properties that reference sub components. As an example,
@@ -100,11 +96,11 @@ export { Breadcrumb }
 These both seem far from ideal but the second way seems particularly worse. Since the underlying component already has sub components mapped to its properties of the same name, to define those same properties on the wrapper component
 seems redundant and likely to cause bloat. **Would like a second pair of eyes on this**
 
-[] - DropdownMenu & useDropdownMenuState (helper function for managing local state)
-[] - Alert
-[] - Breadcrumb
-[] = Card
+- [ ] DropdownMenu & useDropdownMenuState (helper function for managing local state)
+- [ ] Alert
+- [ ] Breadcrumb
+      [ ] = Card
 
 Configuring/Dependency Issues:
 
-[] - Picker - requires [Formik](https://formik.org/), _all form related components imported from WelcomeUI will require Formik_
+- [ ] Picker - requires [Formik](https://formik.org/), _all form related components imported from WelcomeUI will require Formik_
