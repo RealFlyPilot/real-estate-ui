@@ -55,8 +55,8 @@ npm install --save real-estate-ui
 
 ### To Do
 
-[] - Define Custom Component APIs
-[] - Mitigate the presence of both xStyledComponent and StyledComponents
+[ ] - Define Custom Component APIs
+[ ] - Mitigate the presence of both xStyledComponent and StyledComponents
 
 ### Issues
 
