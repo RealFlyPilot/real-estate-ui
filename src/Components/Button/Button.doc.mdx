@@ -1,5 +1,51 @@
-import * as React from 'react';
-    import { Button } from './Button';
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Button } from './Button'
 
-    <Button />
-  
+<Meta title='MDX/Button' component={Button} />
+
+# Button
+
+## Variants
+
+### Basics
+
+```jsx row
+<Button>Primary</Button>
+<Button variant="secondary">Secondary</Button>
+<Button variant="tertiary">Tertiary</Button>
+<Box backgroundColor="nude.700" display="inline" px="sm" py="xxl">
+  <Button variant="tertiary-negative">Tertiary negative</Button>
+</Box>
+<Button variant="quaternary">Quaternary</Button>
+```
+
+### States
+
+```jsx row
+<Button variant="primary-warning">Primary warning</Button>
+<Button variant="secondary-warning">Secondary warning</Button>
+<Button variant="primary-danger">Primary danger</Button>
+<Button variant="secondary-danger">Secondary danger</Button>
+```
+
+## Formats
+
+Use size property with `xs` `sm` `md`(default) `lg` or `xl`.
+
+```jsx row
+<Button size="xs">Tiny</Button>
+<Button size="sm">Small</Button>
+<Button>Medium</Button>
+<Button size="lg">Large</Button>
+<Button size="xl">XLarge</Button>
+```
+
+## Disabled
+
+All disabled buttons have the same style.
+
+```jsx
+<Button variant='primary-danger' disabled>
+  Disabled
+</Button>
+```

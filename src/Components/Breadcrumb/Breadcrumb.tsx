@@ -9,7 +9,7 @@ export interface BreadcrumbProps extends BaseComponentStylePropType {
 const Breadcrumb: React.SFC<BreadcrumbProps> = (props) => {
   return <BaseBreadCrumb {...props} />
 }
-
+// @ts-ignore
 Breadcrumb.Item = BaseBreadCrumb.Item
 
 export { Breadcrumb }

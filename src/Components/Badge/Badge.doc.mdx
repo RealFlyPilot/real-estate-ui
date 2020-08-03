@@ -1,5 +1,33 @@
-import * as React from 'react';
-    import { Badge } from './Badge';
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Badge } from './Badge'
 
-    <Badge />
-  
+<Meta title='MDX/Badge' component={Badge} />
+
+# Badge
+
+<tagversion version={version} name={name} />
+
+Badge is the [Tag](/components/tag) component with small size.
+
+## Install and import
+
+<usage component={component} name={name} peerDependencies={peerDependencies} />
+
+## Examples
+
+```jsx row
+<Badge>{0}</Badge>
+<Badge>{1}</Badge>
+<Badge>2</Badge>
+<Badge>3</Badge>
+<Badge>4</Badge>
+<Badge variant="primary">New</Badge>
+```
+
+## Dependencies
+
+<dependencies dependencies={dependencies} />
+
+## Peer dependencies
+
+<dependencies dependencies={peerDependencies} />

@@ -91,6 +91,7 @@ export type BaseComponentStylePropType = {
   backgroundPosition?: string | number
   backgroundColor?: string | number
   backgroundRepeat?: string | number
+  padding?: string | number
   border?: string | number
   borderTop?: string | number
   borderTopColor?: string | number

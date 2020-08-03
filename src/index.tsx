@@ -5,7 +5,7 @@ import { Box } from './Components/Box'
 import { Card } from './Components/Card'
 import { Stack } from './Components/Stack'
 import { Button } from './Components/Button'
-import { DropdownMenu } from './Components/DropdownMenu'
+import { DropdownMenu, useDropdownMenuState } from './Components/DropdownMenu'
 import { Alert } from './Components/Alert'
 import { Avatar } from './Components/Avatar'
 import { Badge } from './Components/Badge'
@@ -47,6 +47,7 @@ export {
   Card,
   Stack,
   Button,
+  useDropdownMenuState,
   DropdownMenu,
   Alert,
   Avatar,
