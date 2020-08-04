@@ -1,12 +1,13 @@
 import React from 'react'
 import {
-  ThemeProvider,
-  Box,
-  Group,
-  Button,
-  Text,
-  Accordion
+  ThemeProvider
+  // Box,
+  // Group,
+  // Button,
+  // Text,
+  // Accordion
 } from 'real-estate-ui'
+import { Dashboard } from './Components/Dashboard'
 
 const App = () => {
   const theme = {
@@ -23,7 +24,8 @@ const App = () => {
   }
   return (
     <ThemeProvider theme={theme}>
-      <Box alignItems='center'>
+      <Dashboard />
+      {/* <Box alignItems='center'>
         <Text variant='h1'>
           This is the initial and official Real Estate UI Library Demo
         </Text>
@@ -43,7 +45,7 @@ const App = () => {
       </Box>
       <Accordion title='WTF'>
         <div>This some mutha f*ckin content</div>
-      </Accordion>
+      </Accordion> */}
     </ThemeProvider>
   )
 }
