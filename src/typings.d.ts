@@ -18,8 +18,8 @@ declare module '*.svg' {
   export { svgComponent as ReactComponent }
 }
 
-declare module '@welcome-ui/field '
-declare module '@welcome-ui/connected-field '
+declare module '@welcome-ui/field'
+declare module '@welcome-ui/connected-field'
 declare module '@welcome-ui/field-group'
 declare module '@welcome-ui'
 declare module '@welcome-ui/core'

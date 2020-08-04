@@ -96,13 +96,46 @@ export { Breadcrumb }
 These both seem far from ideal but the second way seems particularly worse. Since the underlying component already has sub components mapped to its properties of the same name, to define those same properties on the wrapper component
 seems redundant and likely to cause bloat. **Would like a second pair of eyes on this**
 
-- [ ] DropdownMenu & useDropdownMenuState (helper function for managing local state)
-- [ ] Alert
-- [ ] Breadcrumb
-      [ ] = Card
+**Latest solution to this problem looks like this**
+
+```
+export interface CardProps extends BaseComponentStylePropType {
+  children: any
+  style?: any
+}
+
+export interface CardInterface extends React.SFC<CardProps> {
+  Cover: React.SFC<CardProps>
+  Body: React.SFC<CardProps>
+  style?: any
+}
+
+// CheckboxPropsBaseComponentStylePropType
+const Card: CardInterface = (props) => {
+  return <BaseCard {...props} />
+}
+
+Card.Cover = BaseCard.Cover
+Card.Body = BaseCard.Body
+
+export { Card }
+
+```
+
+Two additional obvious solutions would be to 1. create a class definition on our wrapper component so that we can declare properties on the class or 2. declare properties on the imported WelcomeUI type definition
+like
+
+```
+declare module '@welcome-ui/card' {
+  export class Card {
+      Body: React.SFC
+      // .etc
+  }
+}
+```
 
 Configuring/Dependency Issues:
 
-- [ ] Picker - requires [Formik](https://formik.org/), _all form related components imported from WelcomeUI will require Formik_
-- [ ] Swiper - `Cannot read property 'breakpoints' of undefined`
+- [x] Picker - requires [Formik](https://formik.org/), _all form related components imported from WelcomeUI will require Formik_
+- [x] Swiper - `Cannot read property 'breakpoints' of undefined`
 - [ ] Toast

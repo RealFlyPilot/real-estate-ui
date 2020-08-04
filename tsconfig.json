@@ -22,7 +22,11 @@
   "include": ["src"],
   "exclude": [
     "node_modules",
+    "node_modules/",
     "dist",
+    "src/Utils/",
+    "storybook-static",
+    ".storybook",
     "example/",
     "src/**/**/*.stories.tsx",
     "src/**/**/*.styles.tsx"
