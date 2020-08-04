@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Swiper, useSwiper } from './Swiper'
 
-export default { title: 'Swiper' }
+export default { title: 'Components|Swiper' }
 
 export const SwiperFirstStory = () => {
   const swiper = useSwiper()

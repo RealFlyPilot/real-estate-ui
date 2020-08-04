@@ -3,7 +3,7 @@ import { Card } from './Card'
 import { Text } from '../Text'
 import { Box } from '../Box'
 
-export default { title: 'Card' }
+export default { title: 'Components|Card' }
 
 export const BasicCardWithPadding = () => (
   <Card maxWidth={400} lineHeight='2'>

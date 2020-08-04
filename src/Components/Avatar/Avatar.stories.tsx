@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Avatar } from './Avatar'
 
-export default { title: 'Avatar' }
+export default { title: 'Components|Avatar', component: Avatar }
 
 export const AvatarFirstStory = () => (
   <Avatar

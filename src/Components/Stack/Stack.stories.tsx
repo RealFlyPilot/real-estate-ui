@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Stack } from './Stack'
 
-export default { title: 'Stack' }
+export default { title: 'Components|Stack' }
 
 export const VerticalStack = () => (
   <Stack>

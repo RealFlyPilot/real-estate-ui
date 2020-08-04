@@ -4,7 +4,7 @@ import { Box } from '../Box'
 import { Avatar } from '../Avatar'
 import { Text } from '../Text'
 
-export default { title: 'Link', component: Link }
+export default { title: 'Components|Link', component: Link }
 
 export const LinkFirstStory = () => (
   <div>

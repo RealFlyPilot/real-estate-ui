@@ -1,8 +1,6 @@
-import * as React from 'react';
-  import { Toggle } from './Toggle';
+import * as React from 'react'
+import { Toggle } from './Toggle'
 
-  
-  export default { title: 'Toggle' };
-  
-  export const ToggleFirstStory = () => <Toggle />;
-  
+export default { title: 'Components|Toggle' }
+
+export const ToggleFirstStory = () => <Toggle />

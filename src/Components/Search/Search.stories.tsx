@@ -4,7 +4,7 @@ import { Form } from '../../Utils/Form'
 import { ConnectedField } from '../ConnectedField'
 import { Shape } from '../Shape'
 
-export default { title: 'Form Elements||Search' }
+export default { title: 'Form Elements|Search' }
 
 export const SearchForAMovie = () => (
   <Form initialValues={{}}>

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { useToast, Toast } from './Toast'
 import { Button } from '../Button'
 
-export default { title: 'Toast' }
+export default { title: 'Components|Toast' }
 
 export const BasicExample = () => {
   const toast = useToast()

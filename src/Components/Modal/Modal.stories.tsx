@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Modal, useModalState } from './Modal'
 import { Button } from '../Button'
 
-export default { title: 'Modal', component: Modal }
+export default { title: 'Components|Modal', component: Modal }
 
 export const SimpleExample = () => {
   const modal = useModalState()

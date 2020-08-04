@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Tab, useTabState } from './Tabs'
 
-export default { title: 'Tabs', component: Tab }
+export default { title: 'Components|Tabs', component: Tab }
 
 export const Example = () => {
   const tab = useTabState({ selectedId: 'tab1' })

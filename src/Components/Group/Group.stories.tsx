@@ -3,7 +3,7 @@ import { Group } from './Group'
 import { Button } from '../Button'
 import { Box } from '../Box'
 
-export default { title: 'Group', component: Group }
+export default { title: 'Components|Group', component: Group }
 
 export const ButtonGroup = () => (
   <Group>

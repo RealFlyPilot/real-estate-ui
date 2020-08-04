@@ -4,7 +4,7 @@ import { Form } from '../../Utils/Form'
 import { ConnectedField } from '../ConnectedField'
 import { ITEMS } from '../../Utils/constants'
 
-export default { title: 'Form Elements||Select' }
+export default { title: 'Form Elements|Select' }
 
 export const SelectFirstStory = () => (
   <Form initialValues={{}}>

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Loader } from './Loader'
 
-export default { title: 'Loader' }
+export default { title: 'Components|Loader' }
 
 export const Examples = () => (
   <div>

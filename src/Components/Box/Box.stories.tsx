@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Box } from './Box'
 
-export default { title: 'Box' }
+export default { title: 'Components|Box' }
 
 export const BasicBoxCentered = () => (
   <Box

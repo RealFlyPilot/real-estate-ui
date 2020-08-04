@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Button } from './Button'
 import { Box } from '../Box'
 
-export default { title: 'Button' }
+export default { title: 'Components|Button' }
 
 export const ButtonVariants = () => (
   <Box

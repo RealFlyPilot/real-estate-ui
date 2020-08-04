@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Hint } from './Hint'
 
-export default { title: 'Hint' }
+export default { title: 'Components|Hint' }
 
 export const HintFirstStory = () => (
   <div>

@@ -4,7 +4,7 @@ import { Button } from '../Button'
 import { icons } from '../Icon'
 const { SettingsIcon } = icons
 
-export default { title: 'Table' }
+export default { title: 'Components|Table' }
 
 export const TableFirstStory = () => (
   <Table>

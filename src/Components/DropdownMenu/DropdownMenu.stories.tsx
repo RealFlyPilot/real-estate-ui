@@ -7,7 +7,7 @@ import { Group } from '../Group'
 
 const { TrashIcon, AttachmentIcon, UpIcon, DownIcon, AddIcon } = icons
 
-export default { title: 'DropdownMenu', component: DropdownMenu }
+export default { title: 'Components|DropdownMenu', component: DropdownMenu }
 
 export const DropdownMenuSimple = () => {
   const menu = useDropdownMenuState({

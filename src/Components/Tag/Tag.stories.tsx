@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Tag } from './Tag'
 
-export default { title: 'Tag' }
+export default { title: 'Components|Tag' }
 
 export const Basics = () => (
   <div>

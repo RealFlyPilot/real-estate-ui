@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Badge } from './Badge'
 
-export default { title: 'Badge' }
+export default { title: 'Components|Badge', component: Badge }
 
 export const BadgeFirstStory = () => (
   <div>

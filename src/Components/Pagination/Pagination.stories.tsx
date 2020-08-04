@@ -5,7 +5,7 @@ import { icons } from '../Icon/Icon'
 
 const { CrownIcon } = icons
 
-export default { title: 'Pagination', component: Pagination }
+export default { title: 'Components|Pagination', component: Pagination }
 
 export const BasicExample = () => {
   const [page, setPage] = useState(8)
