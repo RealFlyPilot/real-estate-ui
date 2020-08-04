@@ -1,5 +1,12 @@
 import React from 'react'
-import { ThemeProvider, Box, Group, Button, Text } from 'real-estate-ui'
+import {
+  ThemeProvider,
+  Box,
+  Group,
+  Button,
+  Text,
+  Accordion
+} from 'real-estate-ui'
 
 const App = () => {
   const theme = {
@@ -34,6 +41,9 @@ const App = () => {
           <Button variant='tertiary'>Last</Button>
         </Group>
       </Box>
+      <Accordion title='WTF'>
+        <div>This some mutha f*ckin content</div>
+      </Accordion>
     </ThemeProvider>
   )
 }
