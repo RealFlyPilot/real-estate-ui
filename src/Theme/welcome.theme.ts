@@ -135,6 +135,13 @@ export const welcomeTheme = {
   headingLetterSpacing: -0.4,
   colors,
   palette,
+  breakpoints: {
+    xs: 0,
+    sm: 480,
+    md: 736,
+    lg: 980,
+    xl: 1280
+  },
   radii: {
     sm: 0,
     md: 0,

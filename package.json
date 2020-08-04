@@ -83,6 +83,8 @@
     "styled-components": "^5.1.1"
   },
   "peerDependencies": {
+    "@xstyled/styled-components": "^1.17.0",
+    "@xstyled/system": "^1.17.0",
     "react": "^16.0.0"
   },
   "devDependencies": {
