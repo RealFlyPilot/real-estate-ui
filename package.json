@@ -30,6 +30,7 @@
     "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
+    "@types/react-color": "^3.0.4",
     "@types/styled-components": "^5.1.1",
     "@welcome-ui/accordion": "^2.0.0",
     "@welcome-ui/alert": "^2.0.0",
@@ -77,8 +78,8 @@
     "@welcome-ui/utils.copy": "^2.0.0",
     "@xstyled/styled-components": "^1.17.2",
     "@xstyled/system": "^1.17.2",
-    "docz": "^2.3.1",
     "formik": "^2.1.5",
+    "react-color": "^2.18.1",
     "styled-components": "^5.1.1"
   },
   "peerDependencies": {

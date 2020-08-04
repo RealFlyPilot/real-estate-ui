@@ -4,6 +4,7 @@ import { Stack as BaseStack } from '@welcome-ui/stack'
 
 export interface StackProps extends BaseComponentStylePropType {
   direction?: string
+  spacing?: string
   as?: string
 }
 

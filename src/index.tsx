@@ -38,6 +38,7 @@ import { Select } from './Components/Select'
 import { Textarea } from './Components/Textarea'
 import { TimePicker } from './Components/TimePicker'
 import { Toggle } from './Components/Toggle'
+import { Hint } from './Components/Hint'
 import { useCopyText } from './Components/useCopyText'
 import { ThemeProvider } from './Theme/ThemeProvider'
 
@@ -45,6 +46,7 @@ export {
   InputText,
   Accordion,
   Box,
+  Hint,
   Card,
   Stack,
   Button,

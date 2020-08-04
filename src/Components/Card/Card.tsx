@@ -2,15 +2,23 @@ import * as React from 'react'
 import { BaseComponentStylePropType } from '../component.types'
 import { Card as BaseCard } from '@welcome-ui/card'
 
-export interface CardProps extends BaseComponentStylePropType {}
+export interface CardProps extends BaseComponentStylePropType {
+  children: any
+  style?: any
+}
 
-const Card: React.SFC<CardProps> = (props) => {
+export interface CardInterface extends React.SFC<CardProps> {
+  Cover: React.SFC<CardProps>
+  Body: React.SFC<CardProps>
+  style?: any
+}
+
+// CheckboxPropsBaseComponentStylePropType
+const Card: CardInterface = (props) => {
   return <BaseCard {...props} />
 }
 
-// @ts-ignore
 Card.Cover = BaseCard.Cover
-// @ts-ignore
 Card.Body = BaseCard.Body
 
 export { Card }
