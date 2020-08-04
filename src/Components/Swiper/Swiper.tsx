@@ -18,8 +18,9 @@ const useSwiper = (props: any = {}) => {
 
   // Set slidesToShow to 1 for mobile
   const theme = useTheme()
-  console.log('theme: ', theme)
   const { width: viewportWidth }: any = useViewportSize()
+
+  // Prior to this conditional - was getting breaking error 'cannot read property breakpoints of undefined'
   if (theme && theme.breakpoints && viewportWidth <= theme.breakpoints.sm) {
     slidesToShow = 1
     slidesToSwipe = 1
