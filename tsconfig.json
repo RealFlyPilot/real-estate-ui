@@ -16,6 +16,7 @@
     "noUnusedLocals": false,
     "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true,
+    "types": ["react", "jest"],
     "noImplicitAny": false
   },
 

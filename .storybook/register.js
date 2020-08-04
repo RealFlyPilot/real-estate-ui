@@ -10,6 +10,7 @@ export const ThemeDecorator = makeDecorator({
     channel.emit('my/customEvent', parameters)
 
     const theme = createTheme(welcomeTheme)
+    console.log('theme: ', theme)
 
     return (
       <WuiProvider theme={theme} hasGlobalStyle>

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useLayoutEffect, useState } from 'react'
 
 export function useViewportSize() {
