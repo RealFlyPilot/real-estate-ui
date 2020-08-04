@@ -12,6 +12,7 @@ import { Badge } from './Components/Badge'
 import { Breadcrumb } from './Components/Breadcrumb'
 import { Group } from './Components/Group'
 import { Link } from './Components/Link'
+import { Shape } from './Components/Shape'
 import { Loader } from './Components/Loader'
 import { Modal, useModalState } from './Components/Modal'
 import { Swiper, useSwiper } from './Components/Swiper'
@@ -42,6 +43,9 @@ import { Toggle } from './Components/Toggle'
 import { Hint } from './Components/Hint'
 import { useCopyText } from './Components/useCopyText'
 import { ThemeProvider } from './Theme/ThemeProvider'
+import { baseTheme } from './Theme/base.theme'
+import { welcomeTheme } from './Theme/welcome.theme'
+import { Code } from './Utils/Code'
 
 export {
   InputText,
@@ -55,6 +59,7 @@ export {
   DropdownMenu,
   Alert,
   Avatar,
+  Shape,
   Badge,
   Breadcrumb,
   Group,
@@ -92,7 +97,10 @@ export {
   Toast,
   useToast,
   Tooltip,
-  ThemeProvider
+  ThemeProvider,
+  baseTheme,
+  welcomeTheme,
+  Code
 }
 
 export * from './Components/Icon'

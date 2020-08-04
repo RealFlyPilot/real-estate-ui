@@ -2,8 +2,6 @@ import * as React from 'react'
 import { BaseComponentStylePropType } from '../component.types'
 import { Card as BaseCard } from '@welcome-ui/card'
 
-// const {Body, Cover}
-
 export interface CardProps extends BaseComponentStylePropType {
   children: any
   style?: any

@@ -12,6 +12,16 @@ export interface ModalProps extends BaseComponentStylePropType {
   size?: 'sm' | 'md' | 'lg' | 'auto'
 }
 
-const Modal: React.SFC<ModalProps> = BaseModal
+export interface ModalInterface extends React.SFC<ModalProps> {
+  Trigger: React.SFC<ModalProps>
+  Content: React.SFC<ModalProps>
+  style?: any
+}
+
+const Modal: ModalInterface = (props) => {
+  return <BaseModal {...props} />
+}
+Modal.Trigger = BaseModal.Trigger
+Modal.Content = BaseModal.Content
 
 export { Modal, useModalState }

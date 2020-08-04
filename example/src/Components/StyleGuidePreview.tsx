@@ -10,26 +10,37 @@ import {
   Text,
   Accordion,
   Hint,
-  icons
+  icons,
+  Shape,
+  Modal,
+  useModalState
 } from 'real-estate-ui'
+import { EditableThemeContext } from '../EditableThemeContext'
 
 const { PiechartIcon, ResetIcon, SettingsIcon } = icons
 
 export interface StyleGuidePreviewProps {}
 
 export const StyleGuidePreview: React.SFC<StyleGuidePreviewProps> = () => {
+  const { appTheme } = React.useContext(EditableThemeContext)
+  const {
+    colors: { primary }
+  } = appTheme
+  console.log('primary: ', primary)
+  // console.log('appTheme: ', appTheme)
+
   const [state, setState]: any = React.useState({
     viewPrimaryColors: false,
     viewTypography: false,
     viewSpacing: false,
-    viewColor1Picker: false,
-    viewColor2Picker: false,
-    viewColor3Picker: false,
-    viewColor4Picker: false,
-    viewColor5Picker: false,
-    viewTextColor1Picker: false,
-    viewTextColor2Picker: false,
-    viewTextColor3Picker: false,
+    viewColorPicker: false,
+    // viewColor2Picker: false,
+    // viewColor3Picker: false,
+    // viewColor4Picker: false,
+    // viewColor5Picker: false,
+    // viewTextColor1Picker: false,
+    // viewTextColor2Picker: false,
+    // viewTextColor3Picker: false,
     typographyModal: false,
     spacingModal: false,
     previewBorder: '20px',
@@ -38,19 +49,19 @@ export const StyleGuidePreview: React.SFC<StyleGuidePreviewProps> = () => {
     data: {}
   })
 
-  const resetPickers = () => {
-    setState((state: any) => ({
-      ...state,
-      viewColor1Picker: false,
-      viewColor2Picker: false,
-      viewColor3Picker: false,
-      viewColor4Picker: false,
-      viewColor5Picker: false,
-      viewTextColor1Picker: false,
-      viewTextColor2Picker: false,
-      viewTextColor3Picker: false
-    }))
-  }
+  // const resetPickers = () => {
+  //   setState((state: any) => ({
+  //     ...state,
+  //     viewColorPicker: false
+  //     // viewColor2Picker: false,
+  //     // viewColor3Picker: false,
+  //     // viewColor4Picker: false,
+  //     // viewColor5Picker: false,
+  //     // viewTextColor1Picker: false,
+  //     // viewTextColor2Picker: false,
+  //     // viewTextColor3Picker: false
+  //   }))
+  // }
 
   const resetPreview = () => {
     setState((state: any) => ({
@@ -96,11 +107,11 @@ export const StyleGuidePreview: React.SFC<StyleGuidePreviewProps> = () => {
   //   }))
   // }
 
-  const showColorPicker = (picker: any) => {
-    resetPickers()
+  const showColorPicker = () => {
+    // resetPickers()
     setState((state: any) => ({
       ...state,
-      [picker]: !state[picker]
+      viewColorPicker: true
     }))
   }
 
@@ -143,70 +154,70 @@ export const StyleGuidePreview: React.SFC<StyleGuidePreviewProps> = () => {
     console.log(state.data)
   }
 
-  const handlePrimaryColor1Change = (color: any) => {
-    const formattedRGBA = `rgba(${color.rgb.r}, ${color.rgb.g}, ${color.rgb.b}, ${color.rgb.a})`
-    const { data }: any = state
+  // const handlePrimaryColor1Change = (color: any) => {
+  //   const formattedRGBA = `rgba(${color.rgb.r}, ${color.rgb.g}, ${color.rgb.b}, ${color.rgb.a})`
+  //   const { data }: any = state
 
-    data.primaryColor1 = formattedRGBA
+  //   data.primaryColor1 = formattedRGBA
 
-    setState((state: any) => ({
-      ...state,
-      data: data,
-      viewColor1Picker: false
-    }))
-  }
+  //   setState((state: any) => ({
+  //     ...state,
+  //     data: data,
+  //     viewColor1Picker: false
+  //   }))
+  // }
 
-  const handlePrimaryColor2Change = (color: any) => {
-    const formattedRGBA = `rgba(${color.rgb.r}, ${color.rgb.g}, ${color.rgb.b}, ${color.rgb.a})`
-    const { data }: any = state
+  // const handlePrimaryColor2Change = (color: any) => {
+  //   const formattedRGBA = `rgba(${color.rgb.r}, ${color.rgb.g}, ${color.rgb.b}, ${color.rgb.a})`
+  //   const { data }: any = state
 
-    data.primaryColor2 = formattedRGBA
+  //   data.primaryColor2 = formattedRGBA
 
-    setState((state: any) => ({
-      ...state,
-      data: data,
-      viewColor2Picker: false
-    }))
-  }
+  //   setState((state: any) => ({
+  //     ...state,
+  //     data: data,
+  //     viewColor2Picker: false
+  //   }))
+  // }
 
-  const handlePrimaryColor3Change = (color: any) => {
-    const formattedRGBA = `rgba(${color.rgb.r}, ${color.rgb.g}, ${color.rgb.b}, ${color.rgb.a})`
-    const { data }: any = state
+  // const handlePrimaryColor3Change = (color: any) => {
+  //   const formattedRGBA = `rgba(${color.rgb.r}, ${color.rgb.g}, ${color.rgb.b}, ${color.rgb.a})`
+  //   const { data }: any = state
 
-    data.primaryColor3 = formattedRGBA
+  //   data.primaryColor3 = formattedRGBA
 
-    setState((state: any) => ({
-      ...state,
-      data: data,
-      viewColor3Picker: false
-    }))
-  }
+  //   setState((state: any) => ({
+  //     ...state,
+  //     data: data,
+  //     viewColor3Picker: false
+  //   }))
+  // }
 
-  const handlePrimaryColor4Change = (color: any) => {
-    const formattedRGBA = `rgba(${color.rgb.r}, ${color.rgb.g}, ${color.rgb.b}, ${color.rgb.a})`
-    const { data }: any = state
+  // const handlePrimaryColor4Change = (color: any) => {
+  //   const formattedRGBA = `rgba(${color.rgb.r}, ${color.rgb.g}, ${color.rgb.b}, ${color.rgb.a})`
+  //   const { data }: any = state
 
-    data.primaryColor4 = formattedRGBA
+  //   data.primaryColor4 = formattedRGBA
 
-    setState((state: any) => ({
-      ...state,
-      data: data,
-      viewColor4Picker: false
-    }))
-  }
+  //   setState((state: any) => ({
+  //     ...state,
+  //     data: data,
+  //     viewColor4Picker: false
+  //   }))
+  // }
 
-  const handlePrimaryColor5Change = (color: any) => {
-    const formattedRGBA = `rgba(${color.rgb.r}, ${color.rgb.g}, ${color.rgb.b}, ${color.rgb.a})`
-    const { data }: any = state
+  // const handlePrimaryColor5Change = (color: any) => {
+  //   const formattedRGBA = `rgba(${color.rgb.r}, ${color.rgb.g}, ${color.rgb.b}, ${color.rgb.a})`
+  //   const { data }: any = state
 
-    data.primaryColor5 = formattedRGBA
+  //   data.primaryColor5 = formattedRGBA
 
-    setState((state: any) => ({
-      ...state,
-      data: data,
-      viewColor5Picker: false
-    }))
-  }
+  //   setState((state: any) => ({
+  //     ...state,
+  //     data: data,
+  //     viewColor5Picker: false
+  //   }))
+  // }
 
   const handleTextColor1Change = (color: any) => {
     const formattedRGBA = `rgba(${color.rgb.r}, ${color.rgb.g}, ${color.rgb.b}, ${color.rgb.a})`
@@ -250,30 +261,46 @@ export const StyleGuidePreview: React.SFC<StyleGuidePreviewProps> = () => {
   const { previewBorder } = state
   const { previewMargin } = state
   const { previewPadding } = state
-
+  const modal = useModalState()
   return (
     <div>
       <Box>
         <Accordion
           title={
             <Box display='flex' alignItems='center'>
-              {/* <Box pr={12}> */}
               <PiechartIcon mr={12} />
-              {/* </Box> */}
+
               <Text as='h3' fontWeight='bold'>
                 Primary Colors
               </Text>
             </Box>
           }
         >
-          <Stack>
-            <img
-              alt='dummy alt'
-              src='/images/color-wheel.png'
-              height='20px'
-              onClick={() => showColorPicker('viewColor1Picker')}
-            />
-            {state.viewColor1Picker && (
+          <Stack direction='row' spacing='xl'>
+            {Object.keys(primary).map((key) => (
+              <Box backgroundColor='light.900'>
+                <Modal.Trigger as={Box} {...modal}>
+                  <Shape
+                    width='50px'
+                    height='50px'
+                    shape='circle'
+                    onClick={showColorPicker}
+                    backgroundColor={primary[key]}
+                  />
+                </Modal.Trigger>
+              </Box>
+            ))}
+            <Modal {...modal} size={'sm'} ariaLabel='size example'>
+              <Modal.Content>
+                <SketchPicker
+                  onChangeComplete={(data) => {
+                    console.log('data: ', data)
+                  }}
+                />
+              </Modal.Content>
+            </Modal>
+
+            {/* {state.viewColor1Picker && (
               <SketchPicker onChangeComplete={handlePrimaryColor1Change} />
             )}
             <InputText
@@ -350,7 +377,7 @@ export const StyleGuidePreview: React.SFC<StyleGuidePreviewProps> = () => {
               id='primaryColor5'
               value={state.data.primaryColor5 || ''}
               onChange={handleChange}
-            />
+            /> */}
           </Stack>
         </Accordion>
         <Accordion
@@ -490,12 +517,12 @@ export const StyleGuidePreview: React.SFC<StyleGuidePreviewProps> = () => {
           }
         >
           <Card>
-            <h5>
+            <Text as='h4' fontWeight='bold'>
               The border property can have from one to four values style, width,
               color and radius. See examples below.
-            </h5>
-            <ul>
-              <li>
+            </Text>
+            <Stack p={16}>
+              <Box>
                 <span>dotted</span>
                 <div
                   style={{
@@ -510,8 +537,8 @@ export const StyleGuidePreview: React.SFC<StyleGuidePreviewProps> = () => {
                 <h6>border-style: dashed</h6>
                 <h6>border-color: black</h6>
                 <h6>border-radius: 5px</h6>
-              </li>
-              <li>
+              </Box>
+              <Box>
                 <span>solid</span>
                 <div
                   style={{
@@ -520,12 +547,14 @@ export const StyleGuidePreview: React.SFC<StyleGuidePreviewProps> = () => {
                     height: '25px'
                   }}
                 />
-                <h5>Code:</h5>
-                <h6>border-width: 3px</h6>
-                <h6>border-style: solid</h6>
-                <h6>border-color: black</h6>
-              </li>
-            </ul>
+                <Text as='h5' fontWeight='bold'>
+                  Code:
+                </Text>
+                <Text>border-width: 3px</Text>
+                <Text>border-style: solid</Text>
+                <Text>border-color: black</Text>
+              </Box>
+            </Stack>
             <Stack>
               <span>Border Style 1</span>
               <SettingsIcon onClick={() => setPreviewBorder('border1Width')} />
@@ -702,7 +731,7 @@ export const StyleGuidePreview: React.SFC<StyleGuidePreviewProps> = () => {
               />
               <hr />
 
-              <img
+              {/* <img
                 alt='dummy alt'
                 src='/images/color-wheel.png'
                 height='20px'
@@ -751,7 +780,7 @@ export const StyleGuidePreview: React.SFC<StyleGuidePreviewProps> = () => {
                 id='textColor3'
                 value={state.data.textColor3 || ''}
                 onChange={handleChange}
-              />
+              /> */}
               <hr />
 
               <InputText

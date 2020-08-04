@@ -7,6 +7,7 @@ export interface ShapeProps extends BaseComponentStylePropType {
   height?: string | number
   shape?: 'square' | 'circle'
   width?: string | number
+  onClick?: Function
 }
 
 export const Shape: React.SFC<ShapeProps> = (props) => {
