@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Text as BaseTextComponent } from '@welcome-ui/text'
-import { BaseComponentStylePropType } from '../../types/base.types'
+import { BaseComponentStylePropType } from '../component.types'
 
 export interface TextProps extends BaseComponentStylePropType {
   as?: any

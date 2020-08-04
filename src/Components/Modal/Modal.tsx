@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../../types/base.types'
+import { BaseComponentStylePropType } from '../component.types'
 import { Modal as BaseModal, useModalState } from '@welcome-ui/modal'
 
 export interface ModalProps extends BaseComponentStylePropType {

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../../types/base.types'
+import { BaseComponentStylePropType } from '../component.types'
 import { Hint as BaseHint } from '@welcome-ui/hint'
 
 export interface HintProps extends BaseComponentStylePropType {

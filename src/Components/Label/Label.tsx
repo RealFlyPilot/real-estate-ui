@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../../types/base.types'
+import { BaseComponentStylePropType } from '../component.types'
 import { Label as BaseLabel } from '@welcome-ui/label'
 
 export interface LabelProps extends BaseComponentStylePropType {

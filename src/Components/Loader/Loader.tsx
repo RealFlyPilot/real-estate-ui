@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../../types/base.types'
+import { BaseComponentStylePropType } from '../component.types'
 import { Loader as BaseLoader } from '@welcome-ui/loader'
 
 export interface LoaderProps extends BaseComponentStylePropType {

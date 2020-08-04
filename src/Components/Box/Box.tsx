@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../../types/base.types'
+import { BaseComponentStylePropType } from '../component.types'
 import { Box as BaseBox } from '@welcome-ui/box'
 
 export interface BoxProps extends BaseComponentStylePropType {

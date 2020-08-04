@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../../types/base.types'
+import { BaseComponentStylePropType } from '../component.types'
 import { Button as BaseButton } from '@welcome-ui/button'
 
 export interface ButtonProps extends BaseComponentStylePropType {
@@ -7,6 +7,7 @@ export interface ButtonProps extends BaseComponentStylePropType {
   children?: any
   onClick?: Function
   type?: string
+  shape?: string
 }
 
 export const Button: React.SFC<ButtonProps> = ({

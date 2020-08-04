@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Accordion as BaseAccordion } from '@welcome-ui/accordion'
-import { BaseComponentStylePropType } from '../../types/base.types'
+import { BaseComponentStylePropType } from '../component.types'
 import { icons } from '../Icon/Icon'
 const { RightIcon } = icons
 

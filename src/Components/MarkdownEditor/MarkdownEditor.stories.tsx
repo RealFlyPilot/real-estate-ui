@@ -1,8 +1,6 @@
-import * as React from 'react';
-  import { MarkdownEditor } from './MarkdownEditor';
+import * as React from 'react'
+import { MarkdownEditor } from './MarkdownEditor'
 
-  
-  export default { title: 'MarkdownEditor' };
-  
-  export const MarkdownEditorFirstStory = () => <MarkdownEditor />;
-  
+export default { title: 'In Progress|MarkdownEditor' }
+
+export const MarkdownEditorFirstStory = () => <MarkdownEditor />

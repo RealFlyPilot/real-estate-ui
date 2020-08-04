@@ -22,7 +22,7 @@ import { Label } from './Components/Label'
 import { ConnectedField, Form } from './Components/Form'
 import { useTabState, Tab } from './Components/Tabs'
 import { Tag } from './Components/Tag'
-import { Toast } from './Components/Toast'
+import { Toast, useToast } from './Components/Toast'
 import { Tooltip } from './Components/Tooltip'
 import { Field } from './Components/Field'
 import { Checkbox } from './Components/Checkbox'
@@ -38,6 +38,7 @@ import { Select } from './Components/Select'
 import { Textarea } from './Components/Textarea'
 import { TimePicker } from './Components/TimePicker'
 import { Toggle } from './Components/Toggle'
+import { Hint } from './Components/Hint'
 import { useCopyText } from './Components/useCopyText'
 import { ThemeProvider } from './Theme/ThemeProvider'
 
@@ -45,6 +46,7 @@ export {
   InputText,
   Accordion,
   Box,
+  Hint,
   Card,
   Stack,
   Button,
@@ -60,6 +62,7 @@ export {
   Modal,
   useModalState,
   Swiper,
+  // useSwiper,
   Table,
   Pagination,
   Field,
@@ -86,6 +89,7 @@ export {
   Label,
   Tag,
   Toast,
+  useToast,
   Tooltip,
   ThemeProvider
 }

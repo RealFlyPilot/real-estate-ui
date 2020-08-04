@@ -1,8 +1,6 @@
-import * as React from 'react';
-  import { Select } from './Select';
+import * as React from 'react'
+import { Select } from './Select'
 
-  
-  export default { title: 'Select' };
-  
-  export const SelectFirstStory = () => <Select />;
-  
+export default { title: 'In Progress|Select' }
+
+export const SelectFirstStory = () => <Select />

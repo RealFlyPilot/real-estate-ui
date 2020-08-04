@@ -16,7 +16,6 @@
     "noUnusedLocals": false,
     "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
     "noImplicitAny": false
   },
 
@@ -24,7 +23,7 @@
   "exclude": [
     "node_modules",
     "dist",
-    "example",
+    "example/",
     "src/**/**/*.stories.tsx",
     "src/**/**/*.styles.tsx"
   ]
