@@ -1,1 +1,1 @@
-export { Swiper } from './Swiper';
+export { Swiper, useSwiper } from './Swiper'

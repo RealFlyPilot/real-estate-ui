@@ -14,17 +14,18 @@ import { Group } from './Components/Group'
 import { Link } from './Components/Link'
 import { Loader } from './Components/Loader'
 import { Modal, useModalState } from './Components/Modal'
-import { Swiper } from './Components/Swiper'
+import { Swiper, useSwiper } from './Components/Swiper'
 import { Table } from './Components/Table'
 import { Pagination } from './Components/Pagination'
 import { Text } from './Components/Text'
 import { Label } from './Components/Label'
-import { ConnectedField, Form } from './Components/Form'
 import { useTabState, Tab } from './Components/Tabs'
 import { Tag } from './Components/Tag'
 import { Toast, useToast } from './Components/Toast'
 import { Tooltip } from './Components/Tooltip'
 import { Field } from './Components/Field'
+import { FieldGroup } from './Components/FieldGroup'
+import { ConnectedField } from './Components/ConnectedField'
 import { Checkbox } from './Components/Checkbox'
 import { DatePicker } from './Components/DatePicker'
 import { DateTimePicker } from './Components/DateTimePicker'
@@ -62,10 +63,9 @@ export {
   Modal,
   useModalState,
   Swiper,
-  // useSwiper,
+  useSwiper,
   Table,
   Pagination,
-  Field,
   Checkbox,
   DatePicker,
   DateTimePicker,
@@ -84,7 +84,8 @@ export {
   useTabState,
   Tab,
   ConnectedField,
-  Form,
+  FieldGroup,
+  Field,
   Text,
   Label,
   Tag,

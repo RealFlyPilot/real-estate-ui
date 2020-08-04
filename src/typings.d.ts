@@ -18,9 +18,9 @@ declare module '*.svg' {
   export { svgComponent as ReactComponent }
 }
 
-declare module 'real-estate-ui' {
-  export { Button } from './Components/Button'
-}
+declare module '@welcome-ui/field '
+declare module '@welcome-ui/connected-field '
+declare module '@welcome-ui/field-group'
 declare module '@welcome-ui'
 declare module '@welcome-ui/core'
 declare module '@welcome-ui/input-text'
@@ -44,7 +44,7 @@ declare module '@welcome-ui/loader'
 declare module '@welcome-ui/modal'
 declare module '@welcome-ui/swiper'
 declare module '@welcome-ui/table'
-// declare module '@welcome-ui/tabs'
+declare module '@welcome-ui/tabs'
 declare module '@welcome-ui/tag'
 declare module '@welcome-ui/pagination'
 declare module '@welcome-ui/toast'

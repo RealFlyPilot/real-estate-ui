@@ -1,6 +1,11 @@
 import * as React from 'react'
 import { DatePicker } from './DatePicker'
+import { Form } from '../../Utils/Form'
+import { ConnectedField } from '../ConnectedField'
+export default { title: 'Form Elements|DatePicker' }
 
-export default { title: 'In Progress|DatePicker' }
-
-export const DatePickerFirstStory = () => <DatePicker />
+export const DatePickerFirstStory = () => (
+  <Form initialValues={{ welcome: Date.now() }}>
+    <ConnectedField component={DatePicker} label='Date' name='welcome' />
+  </Form>
+)

@@ -5,7 +5,7 @@ import { Avatar } from '../Avatar'
 import { Text } from '../Text'
 
 export default {
-  title: 'Accordion',
+  title: 'Components|Accordion',
   component: Accordion
 }
 
