@@ -104,3 +104,5 @@ seems redundant and likely to cause bloat. **Would like a second pair of eyes on
 Configuring/Dependency Issues:
 
 - [ ] Picker - requires [Formik](https://formik.org/), _all form related components imported from WelcomeUI will require Formik_
+- [ ] Swiper - `Cannot read property 'breakpoints' of undefined`
+- [ ] Toast

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../../types/base.types'
+import { BaseComponentStylePropType } from '../component.types'
 import { Breadcrumb as BaseBreadCrumb } from '@welcome-ui/breadcrumb'
 
 export interface BreadcrumbProps extends BaseComponentStylePropType {

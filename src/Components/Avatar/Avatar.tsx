@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../../types/base.types'
+import { BaseComponentStylePropType } from '../component.types'
 import { Avatar as BaseAvatar } from '@welcome-ui/avatar'
 
 export interface AvatarProps extends BaseComponentStylePropType {

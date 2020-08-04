@@ -1,8 +1,6 @@
-import * as React from 'react';
-  import { RadioTab } from './RadioTab';
+import * as React from 'react'
+import { RadioTab } from './RadioTab'
 
-  
-  export default { title: 'RadioTab' };
-  
-  export const RadioTabFirstStory = () => <RadioTab />;
-  
+export default { title: 'In Progress|RadioTab' }
+
+export const RadioTabFirstStory = () => <RadioTab />

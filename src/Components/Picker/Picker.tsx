@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BaseComponentStylePropTypes } from '../../types/base.types'
+import { BaseComponentStylePropTypes } from '../component.types'
 import { Picker as BasePicker } from '@welcome-ui/picker'
 
 export interface PickerProps extends BaseComponentStylePropTypes {

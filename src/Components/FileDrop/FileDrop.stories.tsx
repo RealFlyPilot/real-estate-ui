@@ -1,8 +1,6 @@
-import * as React from 'react';
-  import { FileDrop } from './FileDrop';
+import * as React from 'react'
+import { FileDrop } from './FileDrop'
 
-  
-  export default { title: 'FileDrop' };
-  
-  export const FileDropFirstStory = () => <FileDrop />;
-  
+export default { title: 'In Progress|FileDrop' }
+
+export const FileDropFirstStory = () => <FileDrop />

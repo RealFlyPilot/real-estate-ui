@@ -49,7 +49,7 @@ const options = [
   }
 ]
 
-export default { title: 'Picker', Picker }
+export default { title: 'In Progress|Picker', Picker }
 
 export const Example = () => {
   return (

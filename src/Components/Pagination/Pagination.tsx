@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../../types/base.types'
+import { BaseComponentStylePropType } from '../component.types'
 import { Pagination as BasePagination } from '@welcome-ui/pagination'
 
 export interface PaginationProps extends BaseComponentStylePropType {

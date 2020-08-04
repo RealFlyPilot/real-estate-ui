@@ -2,7 +2,7 @@ import React from 'react'
 import {
   BaseComponentStylePropTypes,
   BaseComponentStylePropType
-} from '../../types/base.types'
+} from '../component.types'
 import { Form as FormikForm, Field as FormikField } from 'formik'
 
 export interface FormProps {

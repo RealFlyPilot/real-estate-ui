@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BaseComponentStylePropTypes } from '../../types/base.types'
+import { BaseComponentStylePropTypes } from '../component.types'
 import { Tab as BaseTabs, useTabState } from '@welcome-ui/tabs'
 
 export interface TabProps extends BaseComponentStylePropTypes {

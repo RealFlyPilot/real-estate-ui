@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../../types/base.types'
+import { BaseComponentStylePropType } from '../component.types'
 import { Shape as BaseShape } from '@welcome-ui/shape'
 
 export interface ShapeProps extends BaseComponentStylePropType {
