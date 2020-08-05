@@ -50,7 +50,7 @@ export type BaseComponentStylePropType = {
   layout?: string | number
   row?: string | number
   col?: string | number
-  fontFamily?: string | number
+  fontFamily?: string | number | null
   fontSize?: string | number
   lineHeight?: string | number
   fontWeight?: string | number

@@ -9,11 +9,11 @@ export interface ConnectedFieldProps extends BaseComponentStylePropType {
   required?: boolean
   name?: string
   hint?: string
-  label?: string
+  label?: any
   search?: Function
   itemToString?: Function
   renderItem?: Function
-  placeholder?: string
+  placeholder?: any
   onChange?: Function
   children?: any
   accept?: any
@@ -23,6 +23,7 @@ export interface ConnectedFieldProps extends BaseComponentStylePropType {
   isClearable?: boolean
   isEditable?: boolean
   id?: string
+  value?: any
 }
 
 export const ConnectedField: React.SFC<ConnectedFieldProps> = (props) => {
