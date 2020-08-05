@@ -5,8 +5,7 @@
 // [Final Form](https://final-form.org/docs/react-final-form/getting-started)
 import React from 'react'
 import { Form as FinalForm } from 'react-final-form'
-
-import { Code } from '../Code'
+import { Code } from '../../Utils/Code'
 
 // eslint-disable-next-line react/prop-types
 export const Form = ({ children, initialValues, validate }: any) => (

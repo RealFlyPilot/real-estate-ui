@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 import { Hint as BaseHint } from '@welcome-ui/hint'
 
-export interface HintProps extends BaseComponentStylePropType {
+export interface HintProps extends T_BaseComponentStyleProps {
   checkableField?: boolean
   children?: any
   variant?: 'warning' | 'error' | 'info' | 'success'

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Text as BaseTextComponent } from '@welcome-ui/text'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 
 export type T_TextVariants =
   | 'h0'
@@ -19,7 +19,7 @@ export type T_TextVariants =
   | 'meta1'
   | 'meta2'
 
-export interface TextProps extends BaseComponentStylePropType {
+export interface TextProps extends T_BaseComponentStyleProps {
   as?: any
   children?: any
   variant?: T_TextVariants

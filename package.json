@@ -29,6 +29,7 @@
     "deploy:storybook": "storybook-to-ghpages -- --ci --host-token-env-variable=GITHUB_TOKEN"
   },
   "dependencies": {
+    "@rjsf/core": "^2.2.2",
     "@types/react-color": "^3.0.4",
     "@types/styled-components": "^5.1.1",
     "@welcome-ui/accordion": "^2.0.0",
@@ -84,6 +85,7 @@
     "react-color": "^2.18.1",
     "react-fetch-hook": "^1.8.3",
     "react-final-form": "^6.5.1",
+    "react-json-schema": "^1.2.2",
     "styled-components": "^5.1.1"
   },
   "peerDependencies": {

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { FileUpload } from './FileUpload'
-import { Form } from '../../Utils/Form'
+import { Form } from '../Form'
 import { ConnectedField } from '../ConnectedField'
 import { Button } from '../Button'
 export default { title: 'Form Elements|FileUpload' }

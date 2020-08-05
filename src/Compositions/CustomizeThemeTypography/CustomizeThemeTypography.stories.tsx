@@ -6,5 +6,14 @@ export default { title: 'Compositions|CustomizeThemeTypography' }
 
 export const CustomizeThemeTypographyFirstStory = () => {
   const { fonts, fontFaces } = baseTheme
-  return <CustomizeThemeTypography fonts={fonts} fontFaces={fontFaces} />
+  const updateThemeTypography = (newTypographyTheme) => {
+    console.log('newTypographyTheme: ', newTypographyTheme)
+  }
+  return (
+    <CustomizeThemeTypography
+      fonts={fonts}
+      fontFaces={fontFaces}
+      updateThemeTypography={updateThemeTypography}
+    />
+  )
 }

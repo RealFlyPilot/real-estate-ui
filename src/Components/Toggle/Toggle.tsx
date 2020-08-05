@@ -1,9 +1,9 @@
 import * as React from 'react'
 
 import { Toggle as BaseToggle } from '@welcome-ui/toggle'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 
-export interface ToggleProps extends BaseComponentStylePropType {
+export interface ToggleProps extends T_BaseComponentStyleProps {
   checked?: boolean
   disabled?: boolean
 }

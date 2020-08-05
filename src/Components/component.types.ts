@@ -22,7 +22,8 @@ export type SIZES_TYPE = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
 export type VARIANTS_TYPE = 'error' | 'info' | 'success' | 'valid' | 'warning'
 
-export type BaseComponentStylePropType = {
+
+export type T_BaseComponentStyleProps = {
   m?: string | number
   mt?: string | number
   mr?: string | number

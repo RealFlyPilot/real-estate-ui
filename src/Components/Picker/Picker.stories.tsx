@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Picker } from './Picker'
 import { Shape } from '../Shape'
 import { ConnectedField } from '../ConnectedField'
-import { Form } from '../../Utils/Form'
+import { Form } from '../Form'
 import { icons } from '../Icon'
 
 console.log('Form: ', Form)

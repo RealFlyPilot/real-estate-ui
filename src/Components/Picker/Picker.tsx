@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 import { Picker as BasePicker } from '@welcome-ui/picker'
 
-export interface PickerProps extends BaseComponentStylePropType {
+export interface PickerProps extends T_BaseComponentStyleProps {
   name?: string
   label?: string
   required?: boolean

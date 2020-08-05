@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 import { Button as BaseButton } from '@welcome-ui/button'
 
-export interface ButtonProps extends BaseComponentStylePropType {
+export interface ButtonProps extends T_BaseComponentStyleProps {
   variant?: string
   children?: any
   onClick?: Function

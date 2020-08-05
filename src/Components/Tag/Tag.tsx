@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 import { Tag as BaseTag } from '@welcome-ui/tag'
 
-export interface TagProps extends BaseComponentStylePropType {
+export interface TagProps extends T_BaseComponentStyleProps {
   children?: any
   onRemove?: Function
   shape?: 'square' | 'circle'

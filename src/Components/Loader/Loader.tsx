@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 import { Loader as BaseLoader } from '@welcome-ui/loader'
 
-export interface LoaderProps extends BaseComponentStylePropType {
+export interface LoaderProps extends T_BaseComponentStyleProps {
   color?: string
   size: number | string
 }

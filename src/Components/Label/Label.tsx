@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 import { Label as BaseLabel } from '@welcome-ui/label'
 
-export interface LabelProps extends BaseComponentStylePropType {
+export interface LabelProps extends T_BaseComponentStyleProps {
   checkableField?: boolean
   children?: any
   variant?: 'warning' | 'error' | 'info' | 'success'

@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 import { Modal as BaseModal, useModalState } from '@welcome-ui/modal'
 
-export interface ModalProps extends BaseComponentStylePropType {
+export interface ModalProps extends T_BaseComponentStyleProps {
   ariaLabel?: string
   children?: any
   closeElement?: Node

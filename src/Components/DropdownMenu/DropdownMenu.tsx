@@ -3,8 +3,8 @@ import {
   DropdownMenu as BaseDropdownMenu,
   useDropdownMenuState
 } from '@welcome-ui/dropdown-menu'
-import { BaseComponentStylePropType } from '../component.types'
-export interface DropdownMenuProps extends BaseComponentStylePropType {
+import { T_BaseComponentStyleProps } from '../component.types'
+export interface DropdownMenuProps extends T_BaseComponentStyleProps {
   children?: any
 }
 

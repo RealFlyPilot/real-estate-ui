@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 import { Tab as BaseTabs, useTabState } from '@welcome-ui/tabs'
 
-export interface TabProps extends BaseComponentStylePropType {
+export interface TabProps extends T_BaseComponentStyleProps {
   as?: any
   children?: any
   id?: string

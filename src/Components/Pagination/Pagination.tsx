@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 import { Pagination as BasePagination } from '@welcome-ui/pagination'
 
-export interface PaginationProps extends BaseComponentStylePropType {
+export interface PaginationProps extends T_BaseComponentStyleProps {
   'aria-label'?: string
   children?: any
   getHref?: Function
