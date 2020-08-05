@@ -1,10 +1,10 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import { Meta } from '@storybook/addon-docs/blocks'
 import { Accordion } from './Accordion'
 import { Box } from '../Box'
 import { Avatar } from '../Avatar'
 import { Text } from '../Text'
 
-<Meta title='Accordion' component={Accordion} />
+<Meta title='Accordion' />
 
 # Accordion
 
@@ -49,23 +49,3 @@ Add `visible` property to open at start the accordion
 ## With a custom icon
 
 Customize the icon with a node element on property `icon`
-
-```jsx
-<Accordion title='Accordion title' icon={<PlayIcon />}>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-  nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-</Accordion>
-```
-
-## Properties
-
-<props propTypes={props.propTypes.Accordion} />
-
-## Dependencies
-
-<dependencies dependencies={dependencies} />
-
-## Peer dependencies
-
-<dependencies dependencies={peerDependencies} />
