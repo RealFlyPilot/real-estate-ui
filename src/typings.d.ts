@@ -17,7 +17,7 @@ declare module '*.svg' {
   export default svgUrl
   export { svgComponent as ReactComponent }
 }
-
+declare module 'real-estate-ui'
 declare module '@welcome-ui/field'
 declare module '@welcome-ui/connected-field'
 declare module '@welcome-ui/field-group'

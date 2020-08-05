@@ -16,11 +16,11 @@
     "noUnusedLocals": false,
     "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["react", "jest"],
+    "types": ["react", "jest", "node"],
     "noImplicitAny": false
   },
 
-  "include": ["src"],
+  "include": ["src", "scripts"],
   "exclude": [
     "node_modules",
     "node_modules/",

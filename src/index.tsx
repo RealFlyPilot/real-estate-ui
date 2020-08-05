@@ -46,12 +46,14 @@ import { ThemeProvider } from './Theme/ThemeProvider'
 import { baseTheme } from './Theme/base.theme'
 import { welcomeTheme } from './Theme/welcome.theme'
 import { Code } from './Utils/Code'
+import { Form } from './Utils/Form'
 
 export {
   InputText,
   Accordion,
   Box,
   Hint,
+  Form,
   Card,
   Stack,
   Button,

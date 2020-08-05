@@ -9,11 +9,11 @@ export interface ConnectedFieldProps extends BaseComponentStylePropType {
   required?: boolean
   name?: string
   hint?: string
-  label?: string
+  label?: any
   search?: Function
   itemToString?: Function
   renderItem?: Function
-  placeholder?: string
+  placeholder?: any
   onChange?: Function
   children?: any
   accept?: any
