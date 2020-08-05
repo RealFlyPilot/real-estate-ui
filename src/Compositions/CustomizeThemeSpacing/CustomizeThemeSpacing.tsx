@@ -19,10 +19,11 @@ const { MansanoryIcon } = icons
 
 export interface CustomizeThemeSpacingProps {
   space: T_ThemeSpacing
+  updateThemeSpacing: Function
 }
 
 export const CustomizeThemeSpacing: React.SFC<CustomizeThemeSpacingProps> = React.forwardRef(
-  ({ space }) => {
+  ({ space, updateThemeSpacing }) => {
     const [spacing, setSpacing] = React.useState(space)
 
     const editSpacing = ({ target }) => {
@@ -32,6 +33,12 @@ export const CustomizeThemeSpacing: React.SFC<CustomizeThemeSpacingProps> = Reac
         [name]: value
       }))
     }
+
+    React.useEffect(() => {
+      if (spacing) {
+        updateThemeSpacing(spacing)
+      }
+    }, [spacing])
 
     return (
       <Accordion

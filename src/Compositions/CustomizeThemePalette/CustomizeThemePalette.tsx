@@ -20,11 +20,11 @@ const { PiechartIcon, ResetIcon, SettingsIcon } = icons
 
 export interface CustomizeThemePaletteProps {
   colors: T_ThemeColors
-  updatePalette?: Function
+  updateThemePalette: Function
 }
 
 export const CustomizeThemePalette: React.SFC<CustomizeThemePaletteProps> = React.forwardRef(
-  ({ colors, updatePalette }) => {
+  ({ colors, updateThemePalette }) => {
     const { primary, light } = colors
 
     const [palette, setPalette] = React.useState(colors)
@@ -40,7 +40,7 @@ export const CustomizeThemePalette: React.SFC<CustomizeThemePaletteProps> = Reac
       newPalette[paletteLevel][paletteValue] = newPaletteHex
 
       setPalette(newPalette)
-      if (updatePalette) updatePalette(newPalette)
+      if (updateThemePalette) updateThemePalette(newPalette)
     }
 
     return (

@@ -9,12 +9,62 @@ export interface CustomizeThemeProps {
 }
 
 export const CustomizeTheme: React.SFC<CustomizeThemeProps> = ({ theme }) => {
-  const { space, colors, fonts, fontFaces } = theme
+  const [customTheme, setCustomTheme] = React.useState(theme)
+
+  const { space, colors, fonts, fontFaces } = customTheme
+
+  const updateThemePalette = (newPalette) => {
+    const newColors = {
+      ...colors,
+      ...newPalette // should overwrite old color values - right?
+    }
+    setCustomTheme((customTheme) => ({
+      ...customTheme,
+      colors: newColors
+    }))
+  }
+  const updateThemeSpacing = (newSpacing) => {
+    const newThemeSpacing = {
+      ...space,
+      ...newSpacing
+    }
+    setCustomTheme((customTheme) => ({
+      ...customTheme,
+      space: newThemeSpacing
+    }))
+  }
+  const updateThemeTypography = (newThemeTypography: {
+    fonts: object
+    fontFaces: object
+  }) => {
+    const { fonts: newFonts, fontFaces: newFontFaces } = newThemeTypography
+    const newTypography = {
+      ...fonts,
+      ...fontFaces,
+      ...newFonts,
+      ...newFontFaces
+    }
+    setCustomTheme((customTheme) => ({
+      ...customTheme,
+      ...newTypography
+    }))
+  }
+
   return (
     <Stack>
-      <CustomizeThemePalette colors={colors} />
-      <CustomizeThemeSpacing space={space} />
-      <CustomizeThemeTypography fonts={fonts} fontFaces={fontFaces} />
+      <CustomizeThemePalette
+        colors={colors}
+        updateThemePalette={updateThemePalette}
+      />
+      <CustomizeThemeSpacing
+        updateThemeSpacing={updateThemeSpacing}
+        space={space}
+      />
+      <CustomizeThemeTypography
+        fonts={fonts}
+        fontFaces={fontFaces}
+        updateThemeTypography={updateThemeTypography}
+      />
     </Stack>
   )
 }

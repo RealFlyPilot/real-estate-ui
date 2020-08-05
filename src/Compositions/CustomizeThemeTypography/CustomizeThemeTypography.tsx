@@ -26,6 +26,7 @@ export interface CustomizeThemeTypographyProps {
     'welcome-icon-font': any
     'work-sans': any
   }
+  updateThemeTypography: Function
 }
 
 export const CustomizeThemeTypography: React.SFC<CustomizeThemeTypographyProps> = ({
