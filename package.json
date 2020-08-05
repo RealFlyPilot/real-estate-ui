@@ -81,6 +81,7 @@
     "final-form": "^4.20.1",
     "prism-react-renderer": "^1.1.1",
     "react-color": "^2.18.1",
+    "react-fetch-hook": "^1.8.3",
     "react-final-form": "^6.5.1",
     "styled-components": "^5.1.1"
   },
@@ -91,6 +92,9 @@
     "react-final-form": "^6.5.1"
   },
   "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-docs": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",

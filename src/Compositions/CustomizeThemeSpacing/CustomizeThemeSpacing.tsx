@@ -15,19 +15,17 @@ import {
   Tag,
   Form
 } from '../../index'
-import { SketchPicker } from 'react-color'
 
-const { PiechartIcon, ResetIcon, SettingsIcon } = icons
+const { PiechartIcon } = icons
 
-export interface CustomizeSpacingProps {
+export interface CustomizeThemeSpacingProps {
   space: T_ThemeSpacing
 }
 
-export const CustomizeSpacing: React.SFC<CustomizeSpacingProps> = React.forwardRef(
+export const CustomizeThemeSpacing: React.SFC<CustomizeThemeSpacingProps> = React.forwardRef(
   ({ space }) => {
     const [spacing, setSpacing] = React.useState(space)
     // const [activePalette, setActivePalette]: any = React.useState(null)
-    const modal = useModalState()
 
     const editSpacing = (spacingValue) => {
       console.log('spacingValue: ', spacingValue)
@@ -38,7 +36,6 @@ export const CustomizeSpacing: React.SFC<CustomizeSpacingProps> = React.forwardR
         title={
           <Box display='flex' alignItems='center'>
             <PiechartIcon mr={12} />
-
             <Text as='h3' fontWeight='bold'>
               Theme Spacing
             </Text>
@@ -53,6 +50,7 @@ export const CustomizeSpacing: React.SFC<CustomizeSpacingProps> = React.forwardR
                 flexDirection='row'
                 label={<Tag variant='info'>{key}</Tag>}
                 name={key}
+                onChange={editSpacing}
               />
             ))}
           </Stack>

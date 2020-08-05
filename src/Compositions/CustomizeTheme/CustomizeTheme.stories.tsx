@@ -1,8 +1,10 @@
-import * as React from 'react';
-  import { CustomizeTheme } from './CustomizeTheme';
+import * as React from 'react'
+import { CustomizeTheme } from './CustomizeTheme'
 
-  
-  export default { title: 'CustomizeTheme' };
-  
-  export const CustomizeThemeFirstStory = () => <CustomizeTheme />;
-  
+import { baseTheme } from '../../Theme/base.theme'
+
+export default { title: 'CustomizeTheme' }
+
+export const CustomizeThemeFirstStory = () => {
+  return <CustomizeTheme theme={baseTheme} />
+}

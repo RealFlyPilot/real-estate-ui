@@ -40,7 +40,7 @@ export const CustomizeThemePalette: React.SFC<CustomizeThemePaletteProps> = Reac
       newPalette[paletteLevel][paletteValue] = newPaletteHex
 
       setPalette(newPalette)
-      updatePalette(newPalette)
+      if (updatePalette) updatePalette(newPalette)
     }
 
     return (
@@ -48,7 +48,6 @@ export const CustomizeThemePalette: React.SFC<CustomizeThemePaletteProps> = Reac
         title={
           <Box display='flex' alignItems='center'>
             <PiechartIcon mr={12} />
-
             <Text as='h3' fontWeight='bold'>
               Theme Palette
             </Text>
@@ -60,12 +59,14 @@ export const CustomizeThemePalette: React.SFC<CustomizeThemePaletteProps> = Reac
             <Box backgroundColor='light.900'>
               <Modal.Trigger as={Box} {...modal}>
                 <Shape
-                  width='50px'
-                  height='50px'
+                  width='100px'
+                  height='100px'
                   shape='circle'
                   onClick={() => setActivePalette(`primary.${key}`)}
                   backgroundColor={primary[key]}
-                />
+                >
+                  <Text color='light.900'>{primary[key]}</Text>
+                </Shape>
               </Modal.Trigger>
             </Box>
           ))}

@@ -1,12 +1,10 @@
-import * as React from 'react';
+import * as React from 'react'
 
-  
-  export interface CustomizeThemeProps {
-              
-  }
-  
-  export const CustomizeTheme: React.SFC<CustomizeThemeProps> = () => {
-      return (
-          <div>CustomizeTheme</div>
-      );
-  }
+export interface CustomizeThemeProps {
+  theme: any
+}
+
+export const CustomizeTheme: React.SFC<CustomizeThemeProps> = ({ theme }) => {
+  console.log('theme: ', theme)
+  return <div>CustomizeTheme</div>
+}
