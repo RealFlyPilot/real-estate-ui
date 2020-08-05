@@ -26,7 +26,7 @@
     "gen": "node ./scripts/generate",
     "storybook": "start-storybook -p 9009",
     "build:storybook": "build-storybook",
-    "deploy:storybook": "storybook-to-ghpages"
+    "deploy:storybook": "storybook-to-ghpages -- --ci --host-token-env-variable=GITHUB_TOKEN"
   },
   "dependencies": {
     "@types/react-color": "^3.0.4",
