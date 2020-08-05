@@ -112,15 +112,8 @@ export const ${inputComponentName}: React.SFC<${inputComponentName}Props> = (pro
     writeFile(
       path.join(compRoot, `index.tsx`),
       `import * as React from 'react';\n
-import { ${inputComponentName} as Welcome${inputComponentName} } from './${inputComponentName}';\n
-export interface ${inputComponentName}Props {
-          
-}
-export const ${inputComponentName}: React.SFC<${inputComponentName}Props> = (props) => {
-  return (
-      <Welcome${inputComponentName} {...props} />
-  );
-}`
+export { ${inputComponentName} } from './${inputComponentName}';\n
+`
     )
   }
 }
