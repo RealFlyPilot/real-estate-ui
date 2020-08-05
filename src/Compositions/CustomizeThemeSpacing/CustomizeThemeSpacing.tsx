@@ -3,20 +3,19 @@ import { T_ThemeColors, T_ThemeSpacing } from '../../Theme/theme.types'
 import {
   InputText,
   Box,
-  Card,
   Stack,
-  Button,
+  Shape,
   Text,
   Accordion,
-  Hint,
   icons,
-  useModalState,
   ConnectedField,
   Tag,
   Form
 } from '../../index'
 
-const { PiechartIcon } = icons
+import SpacingExample from './spacing-example.png'
+
+const { MansanoryIcon } = icons
 
 export interface CustomizeThemeSpacingProps {
   space: T_ThemeSpacing
@@ -25,36 +24,61 @@ export interface CustomizeThemeSpacingProps {
 export const CustomizeThemeSpacing: React.SFC<CustomizeThemeSpacingProps> = React.forwardRef(
   ({ space }) => {
     const [spacing, setSpacing] = React.useState(space)
-    // const [activePalette, setActivePalette]: any = React.useState(null)
 
-    const editSpacing = (spacingValue) => {
-      console.log('spacingValue: ', spacingValue)
+    const editSpacing = ({ target }) => {
+      const { value, name } = target
+      setSpacing((spacing) => ({
+        ...spacing,
+        [name]: value
+      }))
     }
 
     return (
       <Accordion
         title={
           <Box display='flex' alignItems='center'>
-            <PiechartIcon mr={12} />
+            <MansanoryIcon mr={12} />
             <Text as='h3' fontWeight='bold'>
               Theme Spacing
             </Text>
           </Box>
         }
       >
-        <Form initialValues={{ ...space }}>
+        <Box>
           <Stack direction='row' spacing='xl'>
-            {Object.keys(space).map((key) => (
-              <ConnectedField
-                component={InputText}
-                flexDirection='row'
-                label={<Tag variant='info'>{key}</Tag>}
-                name={key}
-                onChange={editSpacing}
-              />
-            ))}
+            <Box>
+              <Box>
+                <Text variant='h3'>Keep density consistent</Text>
+                <Text>
+                  Keep consistent density to preserve a unified and balanced
+                  component look.
+                </Text>
+              </Box>
+              <Box>
+                <Shape width='300px' height='300px'>
+                  <img src={SpacingExample} />
+                </Shape>
+              </Box>
+            </Box>
+
+            <Box ml={80}>
+              <Form initialValues={{ ...space }}>
+                <Stack spacing='xl'>
+                  {Object.keys(space).map((key) => (
+                    <ConnectedField
+                      component={InputText}
+                      flexDirection='row'
+                      label={<Tag variant='info'>{key}</Tag>}
+                      name={key}
+                      value={spacing[key]}
+                      onChange={editSpacing}
+                    />
+                  ))}
+                </Stack>
+              </Form>
+            </Box>
           </Stack>
-        </Form>
+        </Box>
       </Accordion>
     )
   }
