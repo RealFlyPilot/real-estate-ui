@@ -28,6 +28,7 @@ export const CustomizeThemePalette: React.SFC<CustomizeThemePaletteProps> = Reac
     const { primary, light } = colors
 
     const [palette, setPalette] = React.useState(colors)
+    const [color, setColor] = React.useState('')
     const [activePalette, setActivePalette]: any = React.useState(null)
     const modal = useModalState()
 
@@ -73,8 +74,10 @@ export const CustomizeThemePalette: React.SFC<CustomizeThemePaletteProps> = Reac
           <Modal {...modal} size={'sm'} ariaLabel='size example'>
             <Modal.Content>
               <SketchPicker
+                color={color}
                 onChangeComplete={(data) => {
                   const { hex } = data
+                  setColor(hex)
                   editPalette(hex)
                 }}
               />

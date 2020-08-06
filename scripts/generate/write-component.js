@@ -13,7 +13,6 @@ module.exports.writeComponentFiles = async (
   welcomeImportName = null,
   useWelcome = false
 ) => {
-  console.log('compRoot: ', compRoot)
   //
   // ──────────────────────────────────────────────────────────────────────────── I ──────────
   //   :::::: G E N   S T O R Y B O O K   F I L E : :  :   :    :     :        :          :

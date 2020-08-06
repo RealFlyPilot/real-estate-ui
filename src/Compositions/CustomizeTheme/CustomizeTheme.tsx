@@ -11,7 +11,33 @@ export interface CustomizeThemeProps {
 export const CustomizeTheme: React.SFC<CustomizeThemeProps> = ({ theme }) => {
   const [customTheme, setCustomTheme] = React.useState(theme)
 
-  const { space, colors, fonts, fontFaces } = customTheme
+  const {
+    space,
+    colors,
+    fonts,
+    fontFaces,
+    defaultLineHeight,
+    defaultLetterSpacing,
+    headingLineHeight,
+    headingLetterSpacing,
+    lineHeights,
+    fontWeights,
+    letterSpacings,
+    fontSizes
+  } = customTheme
+
+  const typographyProps = {
+    fonts,
+    fontFaces,
+    defaultLineHeight,
+    defaultLetterSpacing,
+    headingLineHeight,
+    headingLetterSpacing,
+    lineHeights,
+    fontWeights,
+    letterSpacings,
+    fontSizes
+  }
 
   const updateThemePalette = (newPalette) => {
     const newColors = {
@@ -61,8 +87,7 @@ export const CustomizeTheme: React.SFC<CustomizeThemeProps> = ({ theme }) => {
         space={space}
       />
       <CustomizeThemeTypography
-        fonts={fonts}
-        fontFaces={fontFaces}
+        {...typographyProps}
         updateThemeTypography={updateThemeTypography}
       />
     </Stack>

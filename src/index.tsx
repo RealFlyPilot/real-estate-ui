@@ -22,7 +22,7 @@ import { Text } from './Components/Text'
 import { Label } from './Components/Label'
 import { useTabState, Tab } from './Components/Tabs'
 import { Tag } from './Components/Tag'
-import { Toast, useToast } from './Components/Toast'
+import { ToastProvider, useToasts, Toast } from './Components/Toast'
 import { Tooltip } from './Components/Tooltip'
 import { Field } from './Components/Field'
 import { FieldGroup } from './Components/FieldGroup'
@@ -42,7 +42,7 @@ import { TimePicker } from './Components/TimePicker'
 import { Toggle } from './Components/Toggle'
 import { Hint } from './Components/Hint'
 import { useCopyText } from './Components/useCopyText'
-import { ThemeProvider } from './Theme/ThemeProvider'
+import { createTheme, RuiProvider } from './Theme/RuiProvider'
 import { baseTheme } from './Theme/base.theme'
 import { welcomeTheme } from './Theme/welcome.theme'
 import { Code } from './Utils/Code'
@@ -96,10 +96,12 @@ export {
   Text,
   Label,
   Tag,
+  ToastProvider,
+  useToasts,
   Toast,
-  useToast,
   Tooltip,
-  ThemeProvider,
+  createTheme,
+  RuiProvider,
   baseTheme,
   welcomeTheme,
   Code
