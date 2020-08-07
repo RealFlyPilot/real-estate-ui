@@ -22,6 +22,5 @@ const Toast: React.SFC<ToastProps> = ({ children }) => {
     </Box>
   )
 }
-ToastProvider.components = { Toast: Toast }
 
 export { ToastProvider, useToasts, Toast }
