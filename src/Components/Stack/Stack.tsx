@@ -6,6 +6,7 @@ export interface StackProps extends T_BaseComponentStyleProps {
   direction?: string
   spacing?: string
   as?: string
+  children?: any
 }
 
 export const Stack: React.SFC<StackProps> = (props) => {

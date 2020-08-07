@@ -3,8 +3,9 @@ import { T_BaseComponentStyleProps } from '../component.types'
 import { Card as BaseCard } from '@welcome-ui/card'
 
 export interface CardProps extends T_BaseComponentStyleProps {
-  children: any
+  children?: any
   style?: any
+  src?: string
 }
 
 export interface CardInterface extends React.SFC<CardProps> {

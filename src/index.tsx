@@ -45,8 +45,14 @@ import { useCopyText } from './Components/useCopyText'
 import { createTheme, RuiProvider } from './Theme/RuiProvider'
 import { baseTheme } from './Theme/base.theme'
 import { welcomeTheme } from './Theme/welcome.theme'
+import { darkTheme } from './Theme/dark.theme'
 import { Code } from './Utils/Code'
 import { Form } from './Components/Form/Form'
+import { CustomizeTheme } from './Compositions/CustomizeTheme'
+import { SidebarLayout } from './Layouts/SidebarLayout'
+import { CustomizeThemePalette } from './Compositions/CustomizeThemePalette/CustomizeThemePalette'
+import { CustomizeThemeSpacing } from './Compositions/CustomizeThemeSpacing'
+import { CustomizeThemeTypography } from './Compositions/CustomizeThemeTypography/CustomizeThemeTypography'
 
 export {
   InputText,
@@ -100,11 +106,17 @@ export {
   useToasts,
   Toast,
   Tooltip,
-  createTheme,
   RuiProvider,
+  createTheme,
   baseTheme,
   welcomeTheme,
-  Code
+  darkTheme,
+  Code,
+  // Layouts & compositions
+  CustomizeThemePalette,
+  CustomizeThemeSpacing,
+  CustomizeThemeTypography,
+  SidebarLayout
 }
 
 export * from './Components/Icon'

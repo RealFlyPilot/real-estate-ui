@@ -6,20 +6,26 @@ const mkdir = require('mkdirp')
 const path = require('path')
 const rimraf = require('rimraf')
 const { writeComponentFiles } = require('./write-component')
-const workspaces = ['Compositions', 'Views', 'Components', 'Hooks', 'Services']
+const workspaces = [
+  'Compositions',
+  'Layouts',
+  'Components',
+  'Hooks',
+  'Services'
+]
 
 // Arguments
 let isComponent = false
 const inputComponentName = process.argv[2]
 const isComposition = process.argv[3] && process.argv[3] === '--composition'
-const isView = process.argv[3] && process.argv[3] === '--view'
+const isLayout = process.argv[3] && process.argv[3] === '--layout'
 const isCustom = process.argv[3] && process.argv[3] === '--custom'
 
 let deleteIt =
   (process.argv[3] && process.argv[3] === '--remove') ||
   (process.argv[4] && process.argv[4] === '--remove')
 
-if (!isView && !isComposition && !isCustom) {
+if (!isLayout && !isComposition && !isCustom) {
   if (process.argv[3] && process.argv[3] === '--remove') {
     process.argv[3] = '--component'
     process.argv[4] = '--remove'
@@ -30,7 +36,7 @@ if (!isView && !isComposition && !isCustom) {
 
 const workspace = isComposition
   ? workspaces[0]
-  : isView
+  : isLayout
   ? workspaces[1]
   : isComponent
   ? workspaces[2]

@@ -22,7 +22,6 @@ export type SIZES_TYPE = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
 export type VARIANTS_TYPE = 'error' | 'info' | 'success' | 'valid' | 'warning'
 
-
 export type T_BaseComponentStyleProps = {
   m?: string | number
   mt?: string | number
@@ -112,4 +111,10 @@ export type T_BaseComponentStyleProps = {
   overflow?: string | number
   transition?: string | number
   position?: string
+  zIndex?: string | number
+  top?: string | number
+  right?: string | number
+  bottom?: string | number
+  left?: string | number
+  positioning?: string | number
 }

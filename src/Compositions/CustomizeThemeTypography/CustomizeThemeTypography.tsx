@@ -1,18 +1,16 @@
 import * as React from 'react'
-import {
-  Box,
-  Card,
-  Stack,
-  Text,
-  Accordion,
-  icons,
-  Select,
-  ConnectedField,
-  Tag,
-  Form,
-  InputText,
-  Button
-} from '../../index'
+import { Box } from '../../Components/Box'
+import { Card } from '../../Components/Card'
+import { Stack } from '../../Components/Stack'
+import { Text } from '../../Components/Text'
+import { Accordion } from '../../Components/Accordion'
+import { icons } from '../../Components/Icon'
+import { Select } from '../../Components/Select'
+import { ConnectedField } from '../../Components/ConnectedField'
+import { Tag } from '../../Components/Tag'
+import { Form } from '../../Components/Form'
+import { InputText } from '../../Components/InputText'
+import { Button } from '../../Components/Button'
 import useFetch from 'react-fetch-hook'
 import { T_BaseTheme } from '../../Theme/theme.types'
 

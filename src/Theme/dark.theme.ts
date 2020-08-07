@@ -44,7 +44,7 @@ export const colors = {
   underline: theme.colors.primary[500]
 }
 
-export const darkTheme = {
+export const darkTheme: any = {
   colors,
   selection: {
     color: colors.dark[900]

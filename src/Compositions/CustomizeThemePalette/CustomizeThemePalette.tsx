@@ -1,20 +1,13 @@
 import * as React from 'react'
 import { T_ThemeColors } from '../../Theme/theme.types'
-import {
-  InputText,
-  Box,
-  Card,
-  Stack,
-  Button,
-  Text,
-  Accordion,
-  Hint,
-  icons,
-  Shape,
-  Modal,
-  useModalState
-} from '../../index'
 import { SketchPicker } from 'react-color'
+import { useModalState, Modal } from '../../Components/Modal'
+import { Shape } from '../../Components/Shape'
+import { Accordion } from '../../Components/Accordion'
+import { Box } from '../../Components/Box'
+import { Stack } from '../../Components/Stack'
+import { Text } from '../../Components/Text'
+import { icons } from '../../Components/Icon'
 
 const { PiechartIcon, ResetIcon, SettingsIcon } = icons
 
