@@ -2,7 +2,10 @@ import * as React from 'react'
 import { addons, makeDecorator } from '@storybook/addons'
 import { createTheme, WuiProvider } from '@welcome-ui/core'
 import { welcomeTheme } from '../src/Theme/welcome.theme'
+import { baseTheme } from '../src/Theme/base.theme'
 import { ToastProvider } from '../src/index'
+
+import merge from 'lodash.merge'
 
 export const ThemeDecorator = makeDecorator({
   name: 'ThemeDecorator',
@@ -12,8 +15,10 @@ export const ThemeDecorator = makeDecorator({
     const channel = addons.getChannel()
     channel.emit('my/customEvent', parameters)
 
-    const baseTheme = createTheme(welcomeTheme)
+    const baseTheme = createTheme(merge(welcomeTheme, baseTheme))
     const [theme, setTheme] = React.useState(baseTheme)
+
+    context.theme = theme
 
     const updateTheme = (newTheme) => {
       console.log('updating new theme in storybook', newTheme)
@@ -22,9 +27,10 @@ export const ThemeDecorator = makeDecorator({
         ...newTheme
       }))
     }
-
-    context.theme = theme
     context.updateTheme = updateTheme
+    React.useEffect(() => {
+      context.theme = theme
+    }, [theme])
 
     return (
       <WuiProvider theme={theme} hasGlobalStyle>

@@ -116,7 +116,7 @@ export const CustomizeThemeTypography: React.SFC<CustomizeThemeTypographyProps> 
     setThemeDefaultLetterSpacing
   ] = React.useState(defaultLetterSpacing)
   const updateThemeDefaultLetterSpacing = ({ target: { value } }) => {
-    setThemeDefaultLetterSpacing(value)
+    setThemeDefaultLetterSpacing(parseInt(value) || 0)
   }
 
   // ============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================== //
@@ -125,9 +125,8 @@ export const CustomizeThemeTypography: React.SFC<CustomizeThemeTypographyProps> 
     headingLineHeight
   )
   const updateThemeHeadingLineheight = ({ target: { value } }) => {
-    console.log('value: ', value)
     if (value) {
-      setThemeHeadingLineHeight(value)
+      setThemeHeadingLineHeight(parseInt(value) || 0)
       // setHeadingsFontUpdated(true)
     }
   }
@@ -144,6 +143,45 @@ export const CustomizeThemeTypography: React.SFC<CustomizeThemeTypographyProps> 
       // setHeadingsFontUpdated(true)
     }
   }
+
+  // ============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================== //
+
+  const [themeLetterSpacings, setThemeLetterSpacings] = React.useState(
+    letterSpacings
+  )
+  const updateThemeLetterSpacings = ({ target: { value, name } }) => {
+    setThemeLetterSpacings((themeLetterSpacings) => ({
+      ...themeLetterSpacings,
+      [name]: parseInt(value) || 0
+    }))
+  }
+
+  // ============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================== //
+
+  const [themeLineHeights, setThemeLineHeights] = React.useState(lineHeights)
+  const updateThemeLineHeights = ({ target: { value, name } }) => {
+    setThemeLineHeights((themeLineHeights) => ({
+      ...themeLineHeights,
+      [name]: parseInt(value) || 0
+    }))
+  }
+
+  const { headings, texts } = themeFonts
+
+  const headerVariants = ['h0', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6']
+  const bodyVariants = [
+    'body1',
+    'body2',
+    'body3',
+    'body4',
+    'button',
+    'subtitle1',
+    'subtitle2',
+    'meta1',
+    'meta2'
+  ]
+
+  // ============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================== //
 
   const { isLoading, data }: any = useFetch(
     `https://www.googleapis.com/webfonts/v1/webfonts?key=${process.env.REACT_APP_GOOGLE_API_KEY}`
@@ -203,14 +241,27 @@ export const CustomizeThemeTypography: React.SFC<CustomizeThemeTypographyProps> 
         headingLetterSpacing: themeHeadingLetterSpacing
       })
     }
+    if (themeLineHeights) {
+      updateCustomTypographySettings({
+        lineHeights: themeLineHeights
+      })
+    }
+
+    if (themeLetterSpacings) {
+      updateCustomTypographySettings({
+        letterSpacings: themeLetterSpacings
+      })
+    }
   }, [
     themeDefaultLineHeight,
     themeDefaultLetterSpacing,
     themeHeadingLineHeight,
-    themeHeadingLetterSpacing
+    themeHeadingLetterSpacing,
+    themeLineHeights,
+    themeLetterSpacings
   ])
 
-  const { headings, texts } = themeFonts
+  // ============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================== //
 
   return (
     <Accordion
@@ -242,62 +293,41 @@ export const CustomizeThemeTypography: React.SFC<CustomizeThemeTypographyProps> 
                     </Text>
                     <Tag variant='info'>Examples</Tag>
                     <br />
-                    <Text
-                      fontFamily={
-                        headingsFontUpdated ? themeFonts.headings : null
-                      }
-                      variant='h0'
+                    <Form
+                      initialValues={{
+                        themeLineHeights: themeLineHeights,
+                        themeLetterSpacings: themeLetterSpacings
+                      }}
                     >
-                      Heading 0
-                    </Text>
-                    <Text
-                      fontFamily={
-                        headingsFontUpdated ? themeFonts.headings : null
-                      }
-                      variant='h1'
-                    >
-                      Heading 1
-                    </Text>
-                    <Text
-                      fontFamily={
-                        headingsFontUpdated ? themeFonts.headings : null
-                      }
-                      variant='h2'
-                    >
-                      Heading 2
-                    </Text>
-                    <Text
-                      fontFamily={
-                        headingsFontUpdated ? themeFonts.headings : null
-                      }
-                      variant='h3'
-                    >
-                      Heading 3
-                    </Text>
-                    <Text
-                      fontFamily={
-                        headingsFontUpdated ? themeFonts.headings : null
-                      }
-                      variant='h4'
-                    >
-                      Heading 4
-                    </Text>
-                    <Text
-                      fontFamily={
-                        headingsFontUpdated ? themeFonts.headings : null
-                      }
-                      variant='h5'
-                    >
-                      Heading 5
-                    </Text>
-                    <Text
-                      fontFamily={
-                        headingsFontUpdated ? themeFonts.headings : null
-                      }
-                      variant='h6'
-                    >
-                      Heading 6
-                    </Text>
+                      {headerVariants.map((variant: any, index: any) => (
+                        <Box key={index}>
+                          <Text
+                            fontFamily={
+                              headingsFontUpdated ? themeFonts.headings : null
+                            }
+                            variant={variant}
+                          >
+                            Heading {index + 1}
+                          </Text>
+                          <ConnectedField
+                            id={`${variant}.lineheight`}
+                            component={InputText}
+                            onChange={updateThemeLineHeights}
+                            name={variant}
+                            value={themeLineHeights[variant]}
+                            label='Adjust the lineheight setting'
+                          />
+                          <ConnectedField
+                            id={`${variant}.letter-spacing`}
+                            component={InputText}
+                            onChange={updateThemeLetterSpacings}
+                            name={variant}
+                            value={themeLetterSpacings[variant]}
+                            label='Adjust the letter spacing setting'
+                          />
+                        </Box>
+                      ))}
+                    </Form>
                   </Card.Body>
                 </Card>
               </Box>
@@ -363,7 +393,7 @@ export const CustomizeThemeTypography: React.SFC<CustomizeThemeTypographyProps> 
               </Box>
             </Box>
 
-            <Box>
+            <Box minWidth={400}>
               <Text as='h4'>Text</Text>
               <Card>
                 <Card.Body>
@@ -378,54 +408,40 @@ export const CustomizeThemeTypography: React.SFC<CustomizeThemeTypographyProps> 
                   </Text>
                   <Tag variant='info'>Examples</Tag>
                   <br />
-                  <Text
-                    fontFamily={textFontUpdated ? themeFonts.texts : null}
-                    variant='body1'
+                  <Form
+                    initialValues={{
+                      themeLineHeights: themeLineHeights,
+                      themeLetterSpacings: themeLetterSpacings
+                    }}
                   >
-                    Body 1
-                  </Text>
-                  <Text
-                    fontFamily={textFontUpdated ? themeFonts.texts : null}
-                    variant='body2'
-                  >
-                    Body 2
-                  </Text>
-                  <Text
-                    fontFamily={textFontUpdated ? themeFonts.texts : null}
-                    variant='body3'
-                  >
-                    Body 3
-                  </Text>
-                  <Text
-                    fontFamily={textFontUpdated ? themeFonts.texts : null}
-                    variant='body4'
-                  >
-                    Body 4
-                  </Text>
-                  <Text
-                    fontFamily={textFontUpdated ? themeFonts.texts : null}
-                    variant='subtitle1'
-                  >
-                    Subtitle 1
-                  </Text>
-                  <Text
-                    fontFamily={textFontUpdated ? themeFonts.texts : null}
-                    variant='subtitle2'
-                  >
-                    Subtitle 2
-                  </Text>
-                  <Text
-                    fontFamily={textFontUpdated ? themeFonts.texts : null}
-                    variant='meta1'
-                  >
-                    Meta 1
-                  </Text>
-                  <Text
-                    fontFamily={textFontUpdated ? themeFonts.texts : null}
-                    variant='meta2'
-                  >
-                    Meta 2
-                  </Text>
+                    {bodyVariants.map((variant: any, index: any) => (
+                      <Box key={index}>
+                        <Text
+                          fontFamily={textFontUpdated ? themeFonts.texts : null}
+                          variant={variant}
+                        >
+                          {variant}
+                        </Text>
+                        <ConnectedField
+                          id={`${variant}.lineheight`}
+                          component={InputText}
+                          onChange={updateThemeLineHeights}
+                          name={variant}
+                          value={themeLineHeights[variant]}
+                          label='Adjust the lineheight setting'
+                        />
+                        <br />
+                        <ConnectedField
+                          id={`${variant}.letter-spacing`}
+                          component={InputText}
+                          onChange={updateThemeLetterSpacings}
+                          name={variant}
+                          value={themeLetterSpacings[variant]}
+                          label='Adjust the letter spacing setting'
+                        />
+                      </Box>
+                    ))}
+                  </Form>
                 </Card.Body>
               </Card>
             </Box>

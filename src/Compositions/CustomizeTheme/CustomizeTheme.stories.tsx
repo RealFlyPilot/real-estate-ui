@@ -1,10 +1,13 @@
 import * as React from 'react'
 import { CustomizeTheme } from './CustomizeTheme'
 
-import { baseTheme } from '../../Theme/base.theme'
-
 export default { title: 'Compositions|CustomizeTheme' }
 
-export const CustomizeThemeFirstStory = () => {
-  return <CustomizeTheme theme={baseTheme} />
+export const CustomizeThemeFirstStory = (storyProps) => {
+  const { updateTheme, theme } = storyProps
+  // const [customTheme, updateCustomTheme] = React.useState(theme)
+  const handleThemeUpdate = (newTheme) => {
+    updateTheme(newTheme)
+  }
+  return <CustomizeTheme theme={theme} updateTheme={handleThemeUpdate} />
 }

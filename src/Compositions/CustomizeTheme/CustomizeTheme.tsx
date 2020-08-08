@@ -3,12 +3,18 @@ import { CustomizeThemePalette } from '../CustomizeThemePalette/CustomizeThemePa
 import { CustomizeThemeSpacing } from '../CustomizeThemeSpacing'
 import { CustomizeThemeTypography } from '../CustomizeThemeTypography/CustomizeThemeTypography'
 import { Stack } from '../../Components/Stack'
+import { Box } from '../../Components/Box'
+import { Button } from '../../Components/Button'
 
 export interface CustomizeThemeProps {
   theme: any
+  updateTheme: Function
 }
 
-export const CustomizeTheme: React.SFC<CustomizeThemeProps> = ({ theme }) => {
+export const CustomizeTheme: React.SFC<CustomizeThemeProps> = ({
+  theme,
+  updateTheme
+}) => {
   const [customTheme, setCustomTheme] = React.useState(theme)
 
   const {
@@ -75,6 +81,10 @@ export const CustomizeTheme: React.SFC<CustomizeThemeProps> = ({ theme }) => {
       ...newTypography
     }))
   }
+
+  React.useEffect(() => {
+    updateTheme(customTheme)
+  }, [customTheme])
 
   return (
     <Stack>

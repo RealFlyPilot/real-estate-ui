@@ -1,5 +1,5 @@
 import * as React from 'react'
-import jsonTheme from '../Theme/base.theme.json'
+// import jsonTheme from '../Theme/base.theme.json'
 import { JsonForm } from './JsonForm'
 import { withTheme } from '@rjsf/core'
 
@@ -51,15 +51,15 @@ export const JsonThemeFile = () => {
   )
 }
 
-export const CustomThemeForm = () => {
-  // @ts-ignore
-  const ThemedForm: any = withTheme(JSON.stringify(jsonTheme))
-  return (
-    <ThemedForm
-      schema={jsonTheme}
-      onChange={(d) => console.log(d)}
-      onError={(d) => console.log(d)}
-      onSubmit={(d) => console.log(d)}
-    />
-  )
-}
+// export const CustomThemeForm = () => {
+//   // @ts-ignore
+//   const ThemedForm: any = withTheme(JSON.stringify(jsonTheme))
+//   return (
+//     <ThemedForm
+//       schema={jsonTheme}
+//       onChange={(d) => console.log(d)}
+//       onError={(d) => console.log(d)}
+//       onSubmit={(d) => console.log(d)}
+//     />
+//   )
+// }

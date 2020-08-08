@@ -9,7 +9,7 @@ import { Stack } from '../../Components/Stack'
 import { Text } from '../../Components/Text'
 import { icons } from '../../Components/Icon'
 
-const { PiechartIcon, ResetIcon, SettingsIcon } = icons
+const { PiechartIcon } = icons
 
 export interface CustomizeThemePaletteProps {
   colors: T_ThemeColors
@@ -18,7 +18,7 @@ export interface CustomizeThemePaletteProps {
 
 export const CustomizeThemePalette: React.SFC<CustomizeThemePaletteProps> = React.forwardRef(
   ({ colors, updateThemePalette }) => {
-    const { primary, light } = colors
+    const { underline, overlay, ...colorPalettes } = colors
 
     const [palette, setPalette] = React.useState(colors)
     const [color, setColor] = React.useState('')
@@ -27,16 +27,17 @@ export const CustomizeThemePalette: React.SFC<CustomizeThemePaletteProps> = Reac
 
     const editPalette = (newPaletteHex) => {
       const split = activePalette.split('.')
+      const newPalette = Object.assign({}, palette)
       const paletteLevel = split[0]
       const paletteValue = split[1]
 
-      const newPalette = Object.assign({}, palette)
       newPalette[paletteLevel][paletteValue] = newPaletteHex
 
       setPalette(newPalette)
       if (updateThemePalette) updateThemePalette(newPalette)
     }
 
+    const updateActivePalette = () => {}
     return (
       <Accordion
         title={
@@ -48,35 +49,55 @@ export const CustomizeThemePalette: React.SFC<CustomizeThemePaletteProps> = Reac
           </Box>
         }
       >
-        <Stack direction='row' spacing='xl'>
-          {Object.keys(primary).map((key) => (
-            <Box backgroundColor='light.900'>
-              <Modal.Trigger as={Box} {...modal}>
-                <Shape
-                  width='100px'
-                  height='100px'
-                  shape='circle'
-                  onClick={() => setActivePalette(`primary.${key}`)}
-                  backgroundColor={primary[key]}
-                >
-                  <Text color='light.900'>{primary[key]}</Text>
-                </Shape>
-              </Modal.Trigger>
+        {Object.keys(colorPalettes).map((paletteKey) => {
+          const nestedPalette = colorPalettes[paletteKey]
+
+          return (
+            <Box>
+              <Text as='h3' fontWeight='bold'>
+                {paletteKey}
+              </Text>
+
+              <Stack direction='row' spacing='xl'>
+                {Object.keys(nestedPalette).map((key) => {
+                  const nestedPaletteColor = nestedPalette[key]
+                  return (
+                    <Box backgroundColor='light.900'>
+                      <Modal.Trigger as={Box} {...modal}>
+                        <Shape
+                          width='100px'
+                          height='100px'
+                          shape='circle'
+                          onClick={() => {
+                            setColor(nestedPaletteColor)
+                            setActivePalette(`${paletteKey}.${key}`)
+                          }}
+                          backgroundColor={nestedPaletteColor}
+                        >
+                          <Text color='light.900'>
+                            {colorPalettes[paletteKey][key]}
+                          </Text>
+                        </Shape>
+                      </Modal.Trigger>
+                    </Box>
+                  )
+                })}
+              </Stack>
             </Box>
-          ))}
-          <Modal {...modal} size={'sm'} ariaLabel='size example'>
-            <Modal.Content>
-              <SketchPicker
-                color={color}
-                onChangeComplete={(data) => {
-                  const { hex } = data
-                  setColor(hex)
-                  editPalette(hex)
-                }}
-              />
-            </Modal.Content>
-          </Modal>
-        </Stack>
+          )
+        })}
+        <Modal {...modal} size={'sm'} ariaLabel='size example'>
+          <Modal.Content>
+            <SketchPicker
+              color={color}
+              onChangeComplete={(data) => {
+                const { hex } = data
+                setColor(hex)
+                editPalette(hex)
+              }}
+            />
+          </Modal.Content>
+        </Modal>
       </Accordion>
     )
   }

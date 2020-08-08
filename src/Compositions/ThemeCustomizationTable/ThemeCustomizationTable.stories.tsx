@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { ThemeCustomizationTable } from './ThemeCustomizationTable'
 
 export default { title: 'Compositions|ThemeCustomizationTable' }
 
