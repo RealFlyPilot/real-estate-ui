@@ -83,6 +83,7 @@
     "@welldone-software/why-did-you-render": "^4.2.7",
     "@xstyled/styled-components": "^1.17.2",
     "@xstyled/system": "^1.17.2",
+    "clubhouse-lib": "^0.10.0",
     "final-form": "^4.20.1",
     "lodash.merge": "^4.6.2",
     "prism-react-renderer": "^1.1.1",

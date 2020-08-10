@@ -24,6 +24,7 @@ export interface ConnectedFieldProps extends T_BaseComponentStyleProps {
   isEditable?: boolean
   id?: string
   value?: any
+  renderOption?: any
 }
 
 export const ConnectedField: React.SFC<ConnectedFieldProps> = (props) => {

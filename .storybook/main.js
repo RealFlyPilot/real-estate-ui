@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   stories: ['../src/**/*.stories.tsx'],
 
@@ -11,6 +13,16 @@ module.exports = {
     '@storybook/addon-storysource',
     '@storybook/addon-a11y/register',
 
+    // path.resolve('./.storybook/StoryPanel.js'),
+    // {
+    //   name: 'storybook/bugreport',
+    //   loader: path.resolve('./.storybook/StoryPanel.js'),
+    //   options: {
+    //     configureJSX: true,
+    //     babelOptions: {},
+    //     sourceLoaderOptions: null
+    //   }
+    // },
     // docs & mdx
     {
       name: '@storybook/addon-docs',
