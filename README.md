@@ -18,7 +18,12 @@ To run storybook simple run `yarn storybook`
 
 ### Documentation
 
-## Status
+### Status
 
 - [ ] Configuring custom compositions in source code to allow for the real time editing of the component library design theme.
 - [ ] Create exportable JSON & PDF files from saved theme customization to be used as a custom style guide
+
+### Resources
+
+https://github.com/TechniqueSoftware/react-json-schema#component-mapping
+https://rjsf-team.github.io/react-jsonschema-form/

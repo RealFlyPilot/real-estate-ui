@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 import { Breadcrumb as BaseBreadCrumb } from '@welcome-ui/breadcrumb'
 
-export interface BreadcrumbProps extends BaseComponentStylePropType {
+export interface BreadcrumbProps extends T_BaseComponentStyleProps {
   separator?: any
 }
 

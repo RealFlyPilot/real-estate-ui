@@ -1,16 +1,15 @@
 import React from 'react'
-import { ThemeProvider, baseTheme } from 'real-estate-ui'
-
+import { RuiProvider } from 'real-estate-ui'
+import { useThemeContext } from './Context/ThemeProvider'
 import DashboardLayout from './Layouts/DashboardLayout'
-import { EditableThemeContextProvider } from './EditableThemeContext'
 
 const App = () => {
+  const { customTheme } = useThemeContext()
+
   return (
-    <EditableThemeContextProvider baseTheme={baseTheme}>
-      <ThemeProvider theme={baseTheme}>
-        <DashboardLayout />
-      </ThemeProvider>
-    </EditableThemeContextProvider>
+    <RuiProvider theme={customTheme}>
+      <DashboardLayout />
+    </RuiProvider>
   )
 }
 

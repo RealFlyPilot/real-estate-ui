@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 import { Shape as BaseShape } from '@welcome-ui/shape'
 
-export interface ShapeProps extends BaseComponentStylePropType {
+export interface ShapeProps extends T_BaseComponentStyleProps {
   children?: any
   height?: string | number
   shape?: 'square' | 'circle'

@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 import { Table as BaseTable } from '@welcome-ui/table'
 
-export interface TableProps extends BaseComponentStylePropType {}
+export interface TableProps extends T_BaseComponentStyleProps {}
 
 export const Table: React.SFC<TableProps> = (props) => {
   return <BaseTable {...props} />

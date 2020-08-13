@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Textarea } from './Textarea'
-import { Form } from '../../Utils/Form'
+import { Form } from '../Form'
 import { ConnectedField } from '../ConnectedField'
 
 export default { title: 'Form Elements|Textarea' }

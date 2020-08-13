@@ -14,13 +14,13 @@
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": false,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     "allowSyntheticDefaultImports": true,
     "types": ["react", "jest", "node"],
     "noImplicitAny": false
   },
 
-  "include": ["src", "scripts"],
+  "include": ["src", "scripts", "example/ThemeContext.tsx"],
   "exclude": [
     "node_modules",
     "node_modules/",

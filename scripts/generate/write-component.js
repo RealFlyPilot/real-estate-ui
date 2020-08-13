@@ -13,7 +13,6 @@ module.exports.writeComponentFiles = async (
   welcomeImportName = null,
   useWelcome = false
 ) => {
-  console.log('compRoot: ', compRoot)
   //
   // ──────────────────────────────────────────────────────────────────────────── I ──────────
   //   :::::: G E N   S T O R Y B O O K   F I L E : :  :   :    :     :        :          :
@@ -64,63 +63,30 @@ module.exports.writeComponentFiles = async (
   // ────────────────────────────────────────────────────────────────────────────────────────────────
   //
 
-  if (useWelcome) {
-    writeFile(
-      path.join(compRoot, `${inputComponentName}.tsx`),
-      `import * as React from 'react';\n
-import { ${inputComponentName} as Welcome${inputComponentName}} from '${welcomeImportName}';\n
+  writeFile(
+    path.join(compRoot, `${inputComponentName}.tsx`),
+    `import * as React from 'react';\n
 
-export interface ${inputComponentName}Props  {
-              
+export interface ${inputComponentName}Props {
+            
 }
-      
-export const ${inputComponentName}: React.SFC<${inputComponentName}Props> = (props) => {
+
+export const ${inputComponentName}: React.SFC<${inputComponentName}Props> = () => {
     return (
-        <Welcome${inputComponentName} {...props} />
-        
+        <div>${inputComponentName}</div>
     );
-}
-      `
-    )
-    writeFile(
-      path.join(compRoot, `index.tsx`),
-      `export { ${inputComponentName} } from './${inputComponentName}';\n`
-    )
-  } else {
-    writeFile(
-      path.join(compRoot, `${inputComponentName}.tsx`),
-      `import * as React from 'react';\n
-  
-  export interface ${inputComponentName}Props {
-              
-  }
-  
-  export const ${inputComponentName}: React.SFC<${inputComponentName}Props> = () => {
-      return (
-          <div>${inputComponentName}</div>
-      );
-  }`
-    )
-  }
+}`
+  )
 
   //
   // ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── V ──────────
   //   :::::: G E N E R A T E   I N D E X   F I L E   F O R   R O O T   C O M P O N E N T   E X P O R T : :  :   :    :     :        :          :
   // ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
   //
-  if (!useWelcome) {
-    writeFile(
-      path.join(compRoot, `index.tsx`),
-      `import * as React from 'react';\n
-import { ${inputComponentName} as Welcome${inputComponentName} } from './${inputComponentName}';\n
-export interface ${inputComponentName}Props {
-          
-}
-export const ${inputComponentName}: React.SFC<${inputComponentName}Props> = (props) => {
-  return (
-      <Welcome${inputComponentName} {...props} />
-  );
-}`
-    )
-  }
+  writeFile(
+    path.join(compRoot, `index.tsx`),
+    `import * as React from 'react';\n
+export { ${inputComponentName} } from './${inputComponentName}';\n
+`
+  )
 }

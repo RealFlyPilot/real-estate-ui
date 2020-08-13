@@ -1,4 +1,6 @@
-export const baseTheme = {
+import { T_BaseTheme } from './theme.types'
+
+export const baseTheme: T_BaseTheme = {
   transformers: {},
   colors: {
     primary: {

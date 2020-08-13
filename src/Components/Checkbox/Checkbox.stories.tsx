@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Checkbox } from './Checkbox'
-import { Form } from '../../Utils/Form'
+import { Form } from '../Form'
 import { ConnectedField } from '../ConnectedField'
 import { FieldGroup } from '../FieldGroup'
 

@@ -1,10 +1,11 @@
 import * as React from 'react'
 import { Accordion as BaseAccordion } from '@welcome-ui/accordion'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 import { icons } from '../Icon/Icon'
+
 const { RightIcon } = icons
 
-export interface AccordionProps extends BaseComponentStylePropType {
+export interface AccordionProps extends T_BaseComponentStyleProps {
   title?: any
   children?: any
   visible?: boolean

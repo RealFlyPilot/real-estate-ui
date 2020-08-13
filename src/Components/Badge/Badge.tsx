@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Badge as BaseBadge } from '@welcome-ui/badge'
 
 export interface BadgeProps {
-  variant: string
+  variant?: string
 }
 
 export const Badge: React.SFC<BadgeProps> = (props) => {

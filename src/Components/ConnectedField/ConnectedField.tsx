@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { ConnectedField as BaseField } from '@welcome-ui/connected-field'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 
-export interface ConnectedFieldProps extends BaseComponentStylePropType {
+export interface ConnectedFieldProps extends T_BaseComponentStyleProps {
   component: any
   type?: string
   options?: any

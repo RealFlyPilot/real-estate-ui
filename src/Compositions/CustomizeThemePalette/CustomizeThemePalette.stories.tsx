@@ -6,5 +6,13 @@ export default { title: 'Compositions|CustomizeThemePalette' }
 
 export const CustomizeThemePaletteFirstStory = () => {
   const { colors } = baseTheme
-  return <CustomizeThemePalette colors={colors} />
+  const updateThemePalette = (newColors) => {
+    console.log('newColors: ', newColors)
+  }
+  return (
+    <CustomizeThemePalette
+      colors={colors}
+      updateThemePalette={updateThemePalette}
+    />
+  )
 }

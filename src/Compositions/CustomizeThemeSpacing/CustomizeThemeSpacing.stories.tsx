@@ -6,5 +6,13 @@ export default { title: 'Compositions|CustomizeThemeSpacing' }
 
 export const CustomizeThemeSpacingFirstStory = () => {
   const { space } = baseTheme
-  return <CustomizeThemeSpacing space={space} />
+  const updateThemeSpacing = (newSpacingTheme) => {
+    console.log('newSpacingTheme: ', newSpacingTheme)
+  }
+  return (
+    <CustomizeThemeSpacing
+      updateThemeSpacing={updateThemeSpacing}
+      space={space}
+    />
+  )
 }

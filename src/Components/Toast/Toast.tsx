@@ -1,25 +1,26 @@
-import * as React from 'react'
-import { Toast as BaseToast, useToast } from '@welcome-ui/toast'
-import { BaseComponentStylePropType } from '../component.types'
+import React from 'react'
+import { Box } from '../Box'
+import { ToastProvider, useToasts } from 'react-toast-notifications'
 
-export interface ToastProps extends BaseComponentStylePropType {
+export interface ToastProps {
   children: any
-  style?: any
-  variant?: string
-  icon?: any
-  onClick?: Function
-  size?: string
+  appearance?: string
 }
 
-export interface ToastInterface extends React.SFC<ToastProps> {
-  Snackbar: React.SFC<ToastProps>
-  Growl: React.SFC<ToastProps>
-  Title?: React.SFC<ToastProps>
+const Toast: React.SFC<ToastProps> = ({ children }) => {
+  return (
+    <Box
+      backgroundColor='light.900'
+      borderWidth='1px'
+      borderStyle='solid'
+      borderColor='nude.300'
+      borderRadius='sm'
+      padding='sm'
+      color='dark.900'
+    >
+      {children}
+    </Box>
+  )
 }
-const Toast: ToastInterface = (props) => <BaseToast {...props} />
 
-Toast.Snackbar = BaseToast.Snackbar
-Toast.Growl = BaseToast.Growl
-Toast.Title = BaseToast.Title
-
-export { useToast, Toast }
+export { ToastProvider, useToasts, Toast }

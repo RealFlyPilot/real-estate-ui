@@ -1,11 +1,12 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 import { Stack as BaseStack } from '@welcome-ui/stack'
 
-export interface StackProps extends BaseComponentStylePropType {
+export interface StackProps extends T_BaseComponentStyleProps {
   direction?: string
   spacing?: string
   as?: string
+  children?: any
 }
 
 export const Stack: React.SFC<StackProps> = (props) => {

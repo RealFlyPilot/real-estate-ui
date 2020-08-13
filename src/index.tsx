@@ -22,7 +22,7 @@ import { Text } from './Components/Text'
 import { Label } from './Components/Label'
 import { useTabState, Tab } from './Components/Tabs'
 import { Tag } from './Components/Tag'
-import { Toast, useToast } from './Components/Toast'
+import { ToastProvider, useToasts, Toast } from './Components/Toast'
 import { Tooltip } from './Components/Tooltip'
 import { Field } from './Components/Field'
 import { FieldGroup } from './Components/FieldGroup'
@@ -42,11 +42,17 @@ import { TimePicker } from './Components/TimePicker'
 import { Toggle } from './Components/Toggle'
 import { Hint } from './Components/Hint'
 import { useCopyText } from './Components/useCopyText'
-import { ThemeProvider } from './Theme/ThemeProvider'
+import { createTheme, RuiProvider } from './Theme/RuiProvider'
 import { baseTheme } from './Theme/base.theme'
 import { welcomeTheme } from './Theme/welcome.theme'
+import { darkTheme } from './Theme/dark.theme'
 import { Code } from './Utils/Code'
-import { Form } from './Utils/Form'
+import { Form } from './Components/Form/Form'
+import { CustomizeTheme } from './Compositions/CustomizeTheme'
+import { SidebarLayout } from './Layouts/SidebarLayout'
+import { CustomizeThemePalette } from './Compositions/CustomizeThemePalette/CustomizeThemePalette'
+import { CustomizeThemeSpacing } from './Compositions/CustomizeThemeSpacing'
+import { CustomizeThemeTypography } from './Compositions/CustomizeThemeTypography/CustomizeThemeTypography'
 
 export {
   InputText,
@@ -96,13 +102,21 @@ export {
   Text,
   Label,
   Tag,
+  ToastProvider,
+  useToasts,
   Toast,
-  useToast,
   Tooltip,
-  ThemeProvider,
+  RuiProvider,
+  createTheme,
   baseTheme,
   welcomeTheme,
-  Code
+  darkTheme,
+  Code,
+  // Layouts & compositions
+  CustomizeThemePalette,
+  CustomizeThemeSpacing,
+  CustomizeThemeTypography,
+  SidebarLayout
 }
 
 export * from './Components/Icon'

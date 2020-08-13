@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Swiper, useSwiper } from './Swiper'
+import { useSwiper, Swiper } from './index'
 
 export default { title: 'Components|Swiper' }
 

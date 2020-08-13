@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { RadioTab } from './RadioTab'
 import { RadioGroup } from '../RadioGroup'
-import { Form } from '../../Utils/Form'
+import { Form } from '../Form'
 import { ConnectedField } from '../ConnectedField'
 
 export default { title: 'Form Elements|RadioTab' }

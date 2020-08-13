@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 import { InputText as BaseInputText } from '@welcome-ui/input-text'
 
-export interface InputTextProps extends BaseComponentStylePropType {
+export interface InputTextProps extends T_BaseComponentStyleProps {
   type?: string
   name?: string
   placeholder?: string

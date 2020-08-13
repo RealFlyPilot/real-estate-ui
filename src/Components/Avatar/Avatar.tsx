@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 import { Avatar as BaseAvatar } from '@welcome-ui/avatar'
 
-export interface AvatarProps extends BaseComponentStylePropType {
+export interface AvatarProps extends T_BaseComponentStyleProps {
   src?: any
   name: any
   size?: any

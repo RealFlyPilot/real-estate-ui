@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Select } from './Select'
-import { Form } from '../../Utils/Form'
+import { Form } from '../Form'
 import { ConnectedField } from '../ConnectedField'
 import { ITEMS } from '../../Utils/constants'
 

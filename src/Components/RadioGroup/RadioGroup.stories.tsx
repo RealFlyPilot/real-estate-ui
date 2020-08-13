@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { RadioGroup } from './RadioGroup'
-import { Form } from '../../Utils/Form'
+import { Form } from '../Form'
 import { Button } from '../Button'
 import { ConnectedField } from '../ConnectedField'
 

@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { BaseComponentStylePropType } from '../component.types'
+import { T_BaseComponentStyleProps } from '../component.types'
 import { Group as BaseGroup } from '@welcome-ui/group'
 
-export interface GroupProps extends BaseComponentStylePropType {
+export interface GroupProps extends T_BaseComponentStyleProps {
   children: any
   variant?: string
   size?: string

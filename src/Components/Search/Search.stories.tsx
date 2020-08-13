@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Search } from './Search'
-import { Form } from '../../Utils/Form'
+import { Form } from '../Form'
 import { ConnectedField } from '../ConnectedField'
 import { Shape } from '../Shape'
 
