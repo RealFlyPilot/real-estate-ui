@@ -17,6 +17,9 @@ declare module '*.svg' {
   export default svgUrl
   export { svgComponent as ReactComponent }
 }
+
+declare module 'react-treebeard'
+
 declare module '*.jpg'
 declare module '*.png'
 declare module 'real-estate-ui'

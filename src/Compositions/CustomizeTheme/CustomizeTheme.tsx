@@ -5,6 +5,10 @@ import { CustomizeThemeTypography } from '../CustomizeThemeTypography/CustomizeT
 import { Stack } from '../../Components/Stack'
 import { Box } from '../../Components/Box'
 import { Button } from '../../Components/Button'
+import { ThemeTreeDisplay } from '../ThemeTreeDisplay/ThemeTreeDisplay'
+
+console.log('Stack: ', Stack)
+console.log('Box: ', Box)
 
 export interface CustomizeThemeProps {
   theme: any
@@ -87,19 +91,28 @@ export const CustomizeTheme: React.SFC<CustomizeThemeProps> = ({
   }, [customTheme])
 
   return (
-    <Stack>
-      <CustomizeThemePalette
-        colors={colors}
-        updateThemePalette={updateThemePalette}
-      />
-      <CustomizeThemeSpacing
-        updateThemeSpacing={updateThemeSpacing}
-        space={space}
-      />
-      <CustomizeThemeTypography
-        {...typographyProps}
-        updateThemeTypography={updateThemeTypography}
-      />
-    </Stack>
+    <Box width={1}>
+      <Stack direction='row' spacing='xl' width={1}>
+        <Box minWidth={800}>
+          <Stack>
+            <CustomizeThemePalette
+              colors={colors}
+              updateThemePalette={updateThemePalette}
+            />
+            <CustomizeThemeSpacing
+              updateThemeSpacing={updateThemeSpacing}
+              space={space}
+            />
+            <CustomizeThemeTypography
+              {...typographyProps}
+              updateThemeTypography={updateThemeTypography}
+            />
+          </Stack>
+        </Box>
+        <Box minWidth={300} p={16} ml='auto'>
+          <ThemeTreeDisplay customTheme={customTheme} />
+        </Box>
+      </Stack>
+    </Box>
   )
 }

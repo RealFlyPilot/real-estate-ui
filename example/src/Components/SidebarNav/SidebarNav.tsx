@@ -1,21 +1,41 @@
 import * as React from 'react'
-import { Stack, Link, Box, Text } from 'real-estate-ui'
+import {
+  Box,
+  Code,
+  Stack,
+  Text,
+  SidebarLayout,
+  Button,
+  DropdownMenu,
+  Group,
+  Shape,
+  Card,
+  // UpIcon,
+  useDropdownMenuState,
+  icons
+} from 'real-estate-ui'
+
+const { SearchIcon, AvatarIcon } = icons
 
 export interface SidebarNavProps {
-  links: any
+  links?: any
 }
 
 export const SidebarNav: React.SFC<SidebarNavProps> = ({ links }) => {
   return (
-    <Stack>
-      {links.map((link: any) => (
+    <SidebarLayout.Sidebar width='max-content'>
+      <Stack spacing='xl' alignItems='center'>
         <Box>
-          <Link href={link.url}>
-            {link.icon}
-            <Text>{link.name}</Text>
-          </Link>
+          <Button shape='circle' size='lg' variant='primary'>
+            <AvatarIcon size='lg' />
+          </Button>
         </Box>
-      ))}
-    </Stack>
+        <Box>
+          <Button shape='circle' size='lg' variant='primary'>
+            <SearchIcon size='lg' />
+          </Button>
+        </Box>
+      </Stack>
+    </SidebarLayout.Sidebar>
   )
 }

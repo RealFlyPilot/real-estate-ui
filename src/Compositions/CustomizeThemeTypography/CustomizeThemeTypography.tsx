@@ -18,7 +18,7 @@ const { BoldIcon } = icons
 
 export interface CustomizeThemeTypographyProps {
   fonts: T_BaseTheme['fonts']
-  fontFaces: T_BaseTheme['fontFaces']
+  fontFaces?: T_BaseTheme['fontFaces']
   fontSizes: T_BaseTheme['fontSizes']
   defaultLineHeight: T_BaseTheme['defaultLineHeight']
   defaultLetterSpacing: T_BaseTheme['defaultLetterSpacing']

@@ -39,7 +39,7 @@ module.exports.writeComponentFiles = async (
   writeFile(
     path.join(compRoot, `${inputComponentName}.styles.tsx`),
     `import * as React from 'react';
-  import styled, { css } from 'styled-components';\n
+  import styled, { system, css } from '@xstyled/styled-components'\n
   `
   )
 
