@@ -40,11 +40,8 @@ export interface DashboardLayoutProps {}
 
 const DashboardLayout: React.SFC<DashboardLayoutProps> = () => {
   const menu = useDropdownMenuState({ gutter: 10, placement: 'bottom-end' })
+  const handleClick = () => menu.hide()
 
-  const handleClick = (e: any) => {
-    console.log(`Clicked on ${e.target.innerText}`)
-    menu.hide()
-  }
   return (
     <Stack>
       <Box

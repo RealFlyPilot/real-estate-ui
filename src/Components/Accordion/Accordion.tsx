@@ -10,6 +10,8 @@ export interface AccordionProps extends T_BaseComponentStyleProps {
   children?: any
   visible?: boolean
   icon?: any
+  onClick?: Function
+  ref?: any
 }
 
 export const Accordion: React.SFC<AccordionProps> = ({
