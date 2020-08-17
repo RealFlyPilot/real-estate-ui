@@ -16,23 +16,16 @@ import {
   icons
 } from 'real-estate-ui'
 import { CustomizeTheme } from '../Components/CustomizeTheme'
+import { SidebarNav } from '../Components/SidebarNav/SidebarNav.tsx'
 
 const {
-  SearchIcon,
-  UploadIcon,
-  WriteIcon,
   TrashIcon,
-  CodeIcon,
-  AvatarIcon,
-  Heading1Icon,
+
   MenuIcon,
-  EditIcon,
-  CheckIcon,
+
   AddIcon,
   CrossIcon,
-  DownIcon,
 
-  GetIcon,
   AttachmentIcon
 } = icons
 
@@ -40,11 +33,8 @@ export interface DashboardLayoutProps {}
 
 const DashboardLayout: React.SFC<DashboardLayoutProps> = () => {
   const menu = useDropdownMenuState({ gutter: 10, placement: 'bottom-end' })
+  const handleClick = () => menu.hide()
 
-  const handleClick = (e: any) => {
-    console.log(`Clicked on ${e.target.innerText}`)
-    menu.hide()
-  }
   return (
     <Stack>
       <Box
@@ -58,14 +48,14 @@ const DashboardLayout: React.SFC<DashboardLayoutProps> = () => {
       >
         <Box>
           <Shape height={75} width={100}>
-            <img src='/logo.jpg' />
+            <img src='/logo.jpg' alt='logo' />
           </Shape>
         </Box>
         <Box position='absolute' top='24px' right='32px'>
           <Group variant='tertiary'>
             <Button onClick={handleClick}>
               <AddIcon />
-              <span>First Action</span>
+              <span>Uploads</span>
             </Button>
             <DropdownMenu.Trigger {...menu} as={Button}>
               {menu.visible ? <CrossIcon /> : <MenuIcon />}
@@ -74,7 +64,7 @@ const DashboardLayout: React.SFC<DashboardLayoutProps> = () => {
           <DropdownMenu {...menu} aria-label='Complexity'>
             <DropdownMenu.Item {...menu} onClick={handleClick}>
               <TrashIcon mr='sm' size='sm' />
-              <Box>Second Action</Box>
+              <Box>Upload Existing Theme (JSON)</Box>
             </DropdownMenu.Item>
             <DropdownMenu.Item {...menu} onClick={handleClick}>
               <AttachmentIcon mr='sm' size='sm' />
@@ -84,25 +74,7 @@ const DashboardLayout: React.SFC<DashboardLayoutProps> = () => {
         </Box>
       </Box>
       <SidebarLayout px={16}>
-        <SidebarLayout.Sidebar width='max-content'>
-          <Stack spacing='xl' alignItems='center'>
-            <Box>
-              <Button shape='circle' size='lg'>
-                <AvatarIcon size='lg' />
-              </Button>
-            </Box>
-            <Box>
-              <Button shape='circle' size='lg'>
-                <SearchIcon size='lg' />
-              </Button>
-            </Box>
-            <Box>
-              <Button shape='circle' size='lg'>
-                <UploadIcon size='lg' />
-              </Button>
-            </Box>
-          </Stack>
-        </SidebarLayout.Sidebar>
+        <SidebarNav />
         <SidebarLayout.Main px={16}>
           <CustomizeTheme />
         </SidebarLayout.Main>

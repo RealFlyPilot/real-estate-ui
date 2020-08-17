@@ -17,9 +17,8 @@ export interface CustomizeThemePaletteProps {
 }
 
 export const CustomizeThemePalette: React.SFC<CustomizeThemePaletteProps> = React.forwardRef(
-  ({ colors, updateThemePalette }) => {
+  ({ colors, updateThemePalette }, ref) => {
     const { underline, overlay, ...colorPalettes } = colors
-
     const [palette, setPalette] = React.useState(colors)
     const [color, setColor] = React.useState('')
     const [activePalette, setActivePalette]: any = React.useState(null)
@@ -37,9 +36,9 @@ export const CustomizeThemePalette: React.SFC<CustomizeThemePaletteProps> = Reac
       if (updateThemePalette) updateThemePalette(newPalette)
     }
 
-    const updateActivePalette = () => {}
     return (
       <Accordion
+        ref={ref}
         title={
           <Box display='flex' alignItems='center'>
             <PiechartIcon mr={12} />

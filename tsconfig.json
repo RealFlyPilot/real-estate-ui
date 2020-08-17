@@ -20,7 +20,7 @@
     "noImplicitAny": false
   },
 
-  "include": ["src", "scripts", "example/ThemeContext.tsx"],
+  "include": ["src", "scripts", "example/ThemeContext.tsx", "global.d.ts"],
   "exclude": [
     "node_modules",
     "node_modules/",

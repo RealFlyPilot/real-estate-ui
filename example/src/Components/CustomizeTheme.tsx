@@ -3,23 +3,32 @@ import {
   CustomizeThemePalette,
   CustomizeThemeSpacing,
   CustomizeThemeTypography,
-  Stack
+  Stack,
+  Box,
+  Text,
+  Button,
+  icons
 } from 'real-estate-ui'
 import { useThemeContext } from '../Context/ThemeProvider'
+import { ThemeTreeDisplay } from './ThemeTreeDisplay/ThemeTreeDisplay'
+
+const { GetIcon } = icons
 
 export interface CustomizeThemeProps {}
 
 export const CustomizeTheme: React.SFC<CustomizeThemeProps> = () => {
-  const { customTheme } = useThemeContext()
-  console.log('customTheme: ', customTheme)
-
-  const [demoTheme, setDemoTheme] = React.useState(customTheme)
+  const { customTheme, updateCustomTheme } = useThemeContext()
+  const fileName = 'theme.json'
+  const [fileData, setFileData] = React.useState(JSON.stringify(customTheme))
+  const [fileDataURI, setFileDataURI] = React.useState(
+    `data:application/json;charset=utf-8,${encodeURIComponent(fileData)}`
+  )
 
   const {
     space,
     colors,
     fonts,
-    fontFaces,
+    // fontFaces,
     defaultLineHeight,
     defaultLetterSpacing,
     headingLineHeight,
@@ -32,7 +41,7 @@ export const CustomizeTheme: React.SFC<CustomizeThemeProps> = () => {
 
   const typographyProps = {
     fonts,
-    fontFaces,
+    // fontFaces, having issues with updating this field properly
     defaultLineHeight,
     defaultLetterSpacing,
     headingLineHeight,
@@ -42,8 +51,14 @@ export const CustomizeTheme: React.SFC<CustomizeThemeProps> = () => {
     letterSpacings,
     fontSizes
   }
+  const [demoTheme, setDemoTheme] = React.useState({
+    colors,
+    space,
+    ...typographyProps
+  })
 
   const updateThemePalette = (newPaletteValues: any) => {
+    console.log('newPaletteValues: ', newPaletteValues)
     setDemoTheme((demoTheme) => ({
       ...demoTheme,
       colors: {
@@ -79,20 +94,68 @@ export const CustomizeTheme: React.SFC<CustomizeThemeProps> = () => {
     // }))
   }
 
+  React.useEffect(() => {
+    // if (!demoTheme && customTheme) {
+    //   setDemoTheme(customTheme)
+    // }
+    if (demoTheme && Object.keys(demoTheme).length) {
+      updateCustomTheme(demoTheme)
+    }
+  }, [demoTheme])
+
+  React.useEffect(() => {
+    setFileData(JSON.stringify(customTheme))
+  }, [customTheme])
+
+  React.useEffect(() => {
+    // if (!demoTheme && customTheme) {
+    //   setDemoTheme(customTheme)
+    // }
+    if (fileData && fileData.length) {
+      setFileDataURI(
+        `data:application/json;charset=utf-8,${encodeURIComponent(fileData)}`
+      )
+    }
+  }, [fileData])
+
   return (
-    <Stack>
-      <CustomizeThemePalette
-        colors={colors}
-        updateThemePalette={updateThemePalette}
-      />
-      <CustomizeThemeSpacing
-        updateThemeSpacing={updateThemeSpacing}
-        space={space}
-      />
-      <CustomizeThemeTypography
-        {...typographyProps}
-        updateThemeTypography={updateThemeTypography}
-      />
+    <Stack display='flex' flexDirection='row'>
+      <Box width={0.2} pt={0} px={16} pb={16}>
+        <Stack display='flex' flexDirection='row' alignItems='center'>
+          <Text as='h3' fontWeight='bold'>
+            Current Theme
+          </Text>
+          <Button shape='circle' size='sm' variant='primary' ml={'auto'}>
+            <a href={fileDataURI} download={fileName}>
+              <GetIcon size='lg' />
+            </a>
+          </Button>
+        </Stack>
+
+        <ThemeTreeDisplay
+          allowedCustomizationKeys={{
+            colors,
+            space,
+            ...typographyProps
+          }}
+        />
+      </Box>
+      <Box width={0.8}>
+        <Stack wrapChildren>
+          <CustomizeThemePalette
+            colors={colors}
+            updateThemePalette={updateThemePalette}
+          />
+          <CustomizeThemeSpacing
+            updateThemeSpacing={updateThemeSpacing}
+            space={space}
+          />
+          <CustomizeThemeTypography
+            {...typographyProps}
+            updateThemeTypography={updateThemeTypography}
+          />
+        </Stack>
+      </Box>
     </Stack>
   )
 }

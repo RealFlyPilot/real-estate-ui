@@ -29,18 +29,18 @@ const coreTheme = createTheme(
 const ThemeContext: React.Context<{
   theme: T_BaseTheme
   customTheme: T_BaseTheme
-  updateCustomTheme: () => void
+  updateCustomTheme: (args: any) => void
 }> = createContext({
   theme: coreTheme,
   customTheme: coreTheme,
-  updateCustomTheme: () => {}
+  updateCustomTheme: (args) => {}
 })
 
 export function ThemeProvider({ children }: any) {
   const [theme]: any = useState(coreTheme)
   const [customTheme, setCustomTheme] = useState<T_BaseTheme>(coreTheme)
 
-  const updateCustomTheme: any = (newThemeValues: T_BaseTheme) => {
+  const updateCustomTheme: any = (newThemeValues: any) => {
     console.log('newThemeValues: ', newThemeValues)
 
     setCustomTheme((customTheme) => ({
@@ -57,8 +57,8 @@ export function ThemeProvider({ children }: any) {
 }
 
 export function useThemeContext() {
-  const { theme, customTheme } = useContext(ThemeContext)
-  return { theme, customTheme }
+  const { theme, customTheme, updateCustomTheme } = useContext(ThemeContext)
+  return { theme, customTheme, updateCustomTheme }
 }
 
 export function useSetThemeContext() {
