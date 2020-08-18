@@ -32,3 +32,21 @@ export const hexToRGBA = (hex, transparency = 1) => {
 
   return `rgba(${toRgb}, ${transparency})`
 }
+
+export const convertRemsToPixels = (rem) => {
+  if (typeof rem === 'string') {
+    console.log('rem.replace', rem.replace(/[^\d.-]/g, ''))
+    console.log(parseFloat(rem.replace(/[^\d.-]/g, '')) * 16)
+    return parseFloat(rem.replace(/[^\d.-]/g, '')) * 16
+  }
+
+  return parseFloat(rem) * 16
+}
+
+export const convertPixelsToRem = (pixels) => {
+  if (typeof pixels === 'string') {
+    return parseFloat(pixels.replace(/[^\d.-]/g, '')) / 16
+  }
+
+  return parseFloat(pixels) / 16
+}

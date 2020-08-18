@@ -7,7 +7,8 @@ import {
   Box,
   Text,
   Button,
-  GetIcon
+  GetIcon,
+  SidebarLayout
 } from 'real-estate-ui'
 import { useThemeContext } from '../Context/ThemeProvider'
 import { ThemeTreeDisplay } from './ThemeTreeDisplay/ThemeTreeDisplay'
@@ -117,43 +118,47 @@ export const CustomizeTheme: React.SFC<CustomizeThemeProps> = () => {
   }, [fileData])
 
   return (
-    <Stack display='flex' flexDirection='row'>
-      <Box width={0.2} pt={0} px={16} pb={16}>
-        <Stack display='flex' flexDirection='row' alignItems='center'>
-          <Text as='h3' fontWeight='bold'>
-            Current Theme
-          </Text>
-          <Button shape='circle' size='sm' variant='primary' ml={'auto'}>
-            <a href={fileDataURI} download={fileName}>
-              <GetIcon size='lg' />
-            </a>
-          </Button>
-        </Stack>
+    <SidebarLayout px={16}>
+      <SidebarLayout.Sidebar width='max-content'>
+        <Box>
+          <Stack display='flex' flexDirection='row' alignItems='center'>
+            <Text as='h3' fontWeight='bold'>
+              Current Theme
+            </Text>
+            <Button shape='circle' size='sm' variant='primary' ml={'auto'}>
+              <a href={fileDataURI} download={fileName}>
+                <GetIcon size='lg' />
+              </a>
+            </Button>
+          </Stack>
 
-        <ThemeTreeDisplay
-          allowedCustomizationKeys={{
-            colors,
-            space,
-            ...typographyProps
-          }}
-        />
-      </Box>
-      <Box width={0.8}>
-        <Stack wrapChildren>
-          <CustomizeThemePalette
-            colors={colors}
-            updateThemePalette={updateThemePalette}
+          <ThemeTreeDisplay
+            allowedCustomizationKeys={{
+              colors,
+              space,
+              ...typographyProps
+            }}
           />
-          <CustomizeThemeSpacing
-            updateThemeSpacing={updateThemeSpacing}
-            space={space}
-          />
-          <CustomizeThemeTypography
-            {...typographyProps}
-            updateThemeTypography={updateThemeTypography}
-          />
-        </Stack>
-      </Box>
-    </Stack>
+        </Box>
+      </SidebarLayout.Sidebar>
+      <SidebarLayout.Main px={16}>
+        <Box>
+          <Stack wrapChildren>
+            <CustomizeThemePalette
+              colors={colors}
+              updateThemePalette={updateThemePalette}
+            />
+            <CustomizeThemeSpacing
+              updateThemeSpacing={updateThemeSpacing}
+              space={space}
+            />
+            <CustomizeThemeTypography
+              {...typographyProps}
+              updateThemeTypography={updateThemeTypography}
+            />
+          </Stack>
+        </Box>
+      </SidebarLayout.Main>
+    </SidebarLayout>
   )
 }

@@ -53,6 +53,7 @@ import { SidebarLayout } from './Layouts/SidebarLayout'
 import { CustomizeThemePalette } from './Compositions/CustomizeThemePalette/CustomizeThemePalette'
 import { CustomizeThemeSpacing } from './Compositions/CustomizeThemeSpacing'
 import { CustomizeThemeTypography } from './Compositions/CustomizeThemeTypography/CustomizeThemeTypography'
+import { convertRemsToPixels, convertPixelsToRem } from './Utils/index'
 
 export {
   InputText,
@@ -116,7 +117,10 @@ export {
   CustomizeThemePalette,
   CustomizeThemeSpacing,
   CustomizeThemeTypography,
-  SidebarLayout
+  SidebarLayout,
+  // Utils
+  convertRemsToPixels,
+  convertPixelsToRem
 }
 
 export * from './Components/Icon'

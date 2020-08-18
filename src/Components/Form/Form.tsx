@@ -15,6 +15,27 @@ export const Form = ({ children, initialValues, validate }: any) => (
     validate={validate}
   >
     {({ handleSubmit, values }: any) => (
+      <form onSubmit={handleSubmit}>{children}</form>
+    )}
+  </FinalForm>
+)
+
+export const getFormValues = (node) =>
+  node.querySelector('pre')
+    ? JSON.parse(node.querySelector('pre').textContent)
+    : {}
+
+export const FormWithCodePreview = ({
+  children,
+  initialValues,
+  validate
+}: any) => (
+  <FinalForm
+    initialValues={initialValues}
+    onSubmit={console.debug}
+    validate={validate}
+  >
+    {({ handleSubmit, values }: any) => (
       <>
         <form onSubmit={handleSubmit}>{children}</form>
         <div data-testid='values'>
@@ -26,8 +47,3 @@ export const Form = ({ children, initialValues, validate }: any) => (
     )}
   </FinalForm>
 )
-
-export const getFormValues = (node) =>
-  node.querySelector('pre')
-    ? JSON.parse(node.querySelector('pre').textContent)
-    : {}
