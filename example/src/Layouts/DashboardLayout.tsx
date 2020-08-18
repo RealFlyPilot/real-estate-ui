@@ -17,7 +17,7 @@ import {
 } from 'real-estate-ui'
 import { CustomizeTheme } from '../Components/CustomizeTheme'
 import { SidebarNav } from '../Components/SidebarNav/SidebarNav.tsx'
-
+import logo from './logo.jpg'
 export interface DashboardLayoutProps {}
 
 const DashboardLayout: React.SFC<DashboardLayoutProps> = () => {
@@ -37,7 +37,7 @@ const DashboardLayout: React.SFC<DashboardLayoutProps> = () => {
       >
         <Box>
           <Shape height={75} width={100}>
-            <img src='/logo.jpg' alt='logo' />
+            <img src={logo} alt='logo' />
           </Shape>
         </Box>
         <Box position='absolute' top='24px' right='32px'>

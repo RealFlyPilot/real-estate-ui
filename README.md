@@ -6,13 +6,18 @@
 
 [![NPM](https://img.shields.io/npm/v/real-estate-ui.svg)](https://www.npmjs.com/package/real-estate-ui) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Hosted Environments
+
+- Component Library On Storybook: [Real UI](https://realflypilot.github.io/real-estate-ui/)
+- Demo On Github Pages: [Theme Customization Demo](https://realflypilot.github.io/real-estate-ui-demo/)
+
 ### Install
 
 ```bash
 yarn install
 ```
 
-To edit the src package and run the demo application in one terminal run `yarn start`, open up a second terminal and run `cd example && yarn start`.
+To edit the src package and run the demo application in one terminal run `yarn start`. To run in two terminals open up a second terminal and run `yarn dev` in the first & `cd example && yarn start` in the second.
 
 To run storybook simple run `yarn storybook`
 
