@@ -21,17 +21,17 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Install packages
+        name: Install packages
         run: yarn install
 
-      - name: Build Storybook
+      - if: $GITHUB_REPOSITORY == 'RealFlyPilot/real-estate-ui'
+        name: Build Storybook
         run: yarn build:storybook
 
-      # Runs a set of commands using the runners shell
-      - name: Deploy Storybook
+      - if: $GITHUB_REPOSITORY == 'RealFlyPilot/real-estate-ui'
+        name: Deploy Storybook
         run: yarn deploy:storybook
 
-      - name: Deploy Demo
+      - if: $GITHUB_REPOSITORY == 'RealFlyPilot/real-estate-ui-demo'
+        name: Deploy Demo
         run: yarn deploy
