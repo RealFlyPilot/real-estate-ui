@@ -1,10 +1,14 @@
 import * as React from 'react'
 import { Alert as BaseAlert } from '@welcome-ui/alert'
-import { T_BaseComponentStyleProps, T_StatusVariant } from '../component.types'
+import {
+  T_BaseComponentStyleProps,
+  T_StatusVariant,
+  T_NumericVariant
+} from '../component.types'
 
 export interface AlertButtonProps extends T_BaseComponentStyleProps {
   children: any
-  variant?: T_StatusVariant
+  variant?: T_NumericVariant
 }
 
 const AlertButton: React.SFC<AlertButtonProps> = (props) => (
@@ -27,7 +31,7 @@ export interface AlertProps extends T_BaseComponentStyleProps {
 
 export interface AlertInterface extends React.SFC<AlertProps> {
   Title: React.SFC<AlertProps>
-  Button: React.SFC<AlertProps>
+  Button: React.SFC<AlertButtonProps>
 }
 
 const Alert: AlertInterface = ({ children, ...rest }) => {

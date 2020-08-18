@@ -1,9 +1,7 @@
 import * as React from 'react'
 import { Pagination } from './Pagination'
 import { useState } from 'react'
-import { icons } from '../Icon/Icon'
-
-const { CrownIcon } = icons
+import { CrownIcon } from '../Icon/Icon'
 
 export default { title: 'Components|Pagination', component: Pagination }
 

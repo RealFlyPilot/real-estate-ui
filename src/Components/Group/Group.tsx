@@ -1,11 +1,15 @@
 import * as React from 'react'
-import { T_BaseComponentStyleProps } from '../component.types'
+import {
+  T_BaseComponentStyleProps,
+  T_NumericVariant,
+  T_Sizes
+} from '../component.types'
 import { Group as BaseGroup } from '@welcome-ui/group'
 
 export interface GroupProps extends T_BaseComponentStyleProps {
   children: any
-  variant?: string
-  size?: string
+  variant?: T_NumericVariant
+  size?: T_Sizes
 }
 
 export const Group: React.SFC<GroupProps> = ({

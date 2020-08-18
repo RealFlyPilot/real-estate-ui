@@ -4,7 +4,7 @@ import { Box } from '../../Components/Box'
 import { Stack } from '../../Components/Stack'
 import { Text } from '../../Components/Text'
 import { Accordion } from '../../Components/Accordion'
-import { icons } from '../../Components/Icon'
+import { MansanoryIcon } from '../../Components/Icon'
 import { ConnectedField } from '../../Components/ConnectedField'
 import { Tag } from '../../Components/Tag'
 import { Form } from '../../Components/Form'
@@ -12,8 +12,6 @@ import { InputText } from '../../Components/InputText'
 import { Shape } from '../../Components/Shape'
 
 import SpacingExample from './spacing-example.png'
-
-const { MansanoryIcon } = icons
 
 export interface CustomizeThemeSpacingProps {
   space: T_ThemeSpacing

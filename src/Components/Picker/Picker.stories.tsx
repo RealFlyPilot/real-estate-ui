@@ -3,11 +3,9 @@ import { Picker } from './Picker'
 import { Shape } from '../Shape'
 import { ConnectedField } from '../ConnectedField'
 import { Form } from '../Form'
-import { icons } from '../Icon'
+import { TwitterIcon, PencilIcon, EditIcon } from '../Icon'
 
 console.log('Form: ', Form)
-
-const { TwitterIcon, PencilIcon, EditIcon } = icons
 
 const options = [
   {

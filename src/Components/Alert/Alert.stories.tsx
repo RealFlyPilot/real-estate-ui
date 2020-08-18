@@ -1,9 +1,7 @@
 import * as React from 'react'
 import { Alert } from './Alert'
 import { Box } from '../Box'
-import { icons } from '../Icon'
-
-const { HeartIcon } = icons
+import { HeartIcon } from '../Icon'
 
 export default { title: 'Components|Alert', component: Alert }
 

@@ -7,12 +7,13 @@ import { T_BaseComponentStyleProps } from '../component.types'
 
 export interface DropdownMenuProps extends T_BaseComponentStyleProps {
   children?: any
+  innerProps?: object
+  visible?: boolean
 }
 
 export interface DropdownMenuInterface extends React.SFC<DropdownMenuProps> {
   Item: React.SFC<DropdownMenuProps>
   Trigger: React.SFC<DropdownMenuProps>
-  style?: any
 }
 
 const DropdownMenu: DropdownMenuInterface = (props) => (

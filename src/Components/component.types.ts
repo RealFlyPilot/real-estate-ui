@@ -18,9 +18,19 @@ export type OPTIONS_TYPE = {
 
 export type T_Shapes = 'square' | 'circle'
 
-export type T_Sizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+export type T_Sizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
 
 export type T_StatusVariant = 'error' | 'info' | 'success' | 'valid' | 'warning'
+
+export type T_NumericVariant =
+  | 'primary'
+  | 'secondary'
+  | 'tertiary'
+  | 'quaternary'
+  | 'primary-warning'
+  | 'secondary-warning'
+  | 'primary-danger'
+  | 'secondary-danger'
 
 export type T_BaseComponentStyleProps = {
   m?: string | number
