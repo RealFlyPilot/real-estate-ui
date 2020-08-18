@@ -1,11 +1,9 @@
 import * as React from 'react'
 import { DropdownMenu, useDropdownMenuState } from './DropdownMenu'
-import { icons } from '../Icon'
+import { TrashIcon, AttachmentIcon, UpIcon, DownIcon, AddIcon } from '../Icon'
 import { Button } from '../Button'
 import { Box } from '../Box'
 import { Group } from '../Group'
-
-const { TrashIcon, AttachmentIcon, UpIcon, DownIcon, AddIcon } = icons
 
 export default { title: 'Components|DropdownMenu', component: DropdownMenu }
 

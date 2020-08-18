@@ -1,11 +1,11 @@
 import * as React from 'react'
-import { T_BaseComponentStyleProps } from '../component.types'
+import { T_BaseComponentStyleProps, T_StatusVariant } from '../component.types'
 import { Hint as BaseHint } from '@welcome-ui/hint'
 
 export interface HintProps extends T_BaseComponentStyleProps {
   checkableField?: boolean
   children?: any
-  variant?: 'warning' | 'error' | 'info' | 'success'
+  variant?: T_StatusVariant
 }
 
 export const Hint: React.SFC<HintProps> = ({

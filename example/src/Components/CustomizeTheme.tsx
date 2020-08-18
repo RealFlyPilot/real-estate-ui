@@ -7,12 +7,10 @@ import {
   Box,
   Text,
   Button,
-  icons
+  GetIcon
 } from 'real-estate-ui'
 import { useThemeContext } from '../Context/ThemeProvider'
 import { ThemeTreeDisplay } from './ThemeTreeDisplay/ThemeTreeDisplay'
-
-const { GetIcon } = icons
 
 export interface CustomizeThemeProps {}
 

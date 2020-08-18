@@ -1,21 +1,12 @@
 import * as React from 'react'
 import {
   Box,
-  Code,
   Stack,
-  Text,
   SidebarLayout,
   Button,
-  DropdownMenu,
-  Group,
-  Shape,
-  Card,
-  // UpIcon,
-  useDropdownMenuState,
-  icons
+  SearchIcon,
+  AvatarIcon
 } from 'real-estate-ui'
-
-const { SearchIcon, AvatarIcon } = icons
 
 export interface SidebarNavProps {
   links?: any

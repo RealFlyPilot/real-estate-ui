@@ -1,10 +1,7 @@
 import * as React from 'react'
 import { useCopyText } from './useCopyText'
-
 import { Button } from '../Button'
-import { icons } from '../Icon'
-
-const { CheckIcon, LinkIcon } = icons
+import { CheckIcon, LinkIcon } from '../Icon'
 
 export default { title: 'Utilities|useCopyText' }
 

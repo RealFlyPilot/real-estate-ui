@@ -2,32 +2,21 @@
 import React from 'react'
 import {
   Box,
-  Code,
   Stack,
-  Text,
   SidebarLayout,
   Button,
   DropdownMenu,
   Group,
   Shape,
-  Card,
-  // UpIcon,
   useDropdownMenuState,
-  icons
+  TrashIcon,
+  MenuIcon,
+  AddIcon,
+  CrossIcon,
+  AttachmentIcon
 } from 'real-estate-ui'
 import { CustomizeTheme } from '../Components/CustomizeTheme'
 import { SidebarNav } from '../Components/SidebarNav/SidebarNav.tsx'
-
-const {
-  TrashIcon,
-
-  MenuIcon,
-
-  AddIcon,
-  CrossIcon,
-
-  AttachmentIcon
-} = icons
 
 export interface DashboardLayoutProps {}
 

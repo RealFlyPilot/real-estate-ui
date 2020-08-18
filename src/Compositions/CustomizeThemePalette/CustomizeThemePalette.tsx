@@ -7,9 +7,7 @@ import { Accordion } from '../../Components/Accordion'
 import { Box } from '../../Components/Box'
 import { Stack } from '../../Components/Stack'
 import { Text } from '../../Components/Text'
-import { icons } from '../../Components/Icon'
-
-const { PiechartIcon } = icons
+import { PiechartIcon } from '../../Components/Icon'
 
 export interface CustomizeThemePaletteProps {
   colors: T_ThemeColors

@@ -1,6 +1,6 @@
-export type DIRECTIONS_TYPE = 'row' | 'container' | 'column'
+export type T_Directions = 'row' | 'container' | 'column'
 
-export type INPUTS_TYPE = [
+export type T_Inputs = [
   | 'checkbox'
   | 'email'
   | 'file'
@@ -16,11 +16,21 @@ export type OPTIONS_TYPE = {
   value: number | string
 }
 
-export type SHAPES_TYPE = 'square' | 'circle'
+export type T_Shapes = 'square' | 'circle'
 
-export type SIZES_TYPE = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+export type T_Sizes = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
 
-export type VARIANTS_TYPE = 'error' | 'info' | 'success' | 'valid' | 'warning'
+export type T_StatusVariant = 'error' | 'info' | 'success' | 'valid' | 'warning'
+
+export type T_NumericVariant =
+  | 'primary'
+  | 'secondary'
+  | 'tertiary'
+  | 'quaternary'
+  | 'primary-warning'
+  | 'secondary-warning'
+  | 'primary-danger'
+  | 'secondary-danger'
 
 export type T_BaseComponentStyleProps = {
   m?: string | number
@@ -117,4 +127,6 @@ export type T_BaseComponentStyleProps = {
   bottom?: string | number
   left?: string | number
   positioning?: string | number
+  style?: object
+  ref?: any
 }

@@ -1,8 +1,7 @@
 import * as React from 'react'
 import { Table } from './Table'
 import { Button } from '../Button'
-import { icons } from '../Icon'
-const { SettingsIcon } = icons
+import { SettingsIcon } from '../Icon'
 
 export default { title: 'Components|Table' }
 
