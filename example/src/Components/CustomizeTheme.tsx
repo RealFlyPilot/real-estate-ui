@@ -35,7 +35,8 @@ export const CustomizeTheme: React.SFC<CustomizeThemeProps> = () => {
     lineHeights,
     fontWeights,
     letterSpacings,
-    fontSizes
+    fontSizes,
+    textsFontFamily
   } = customTheme
 
   const typographyProps = {
@@ -48,7 +49,8 @@ export const CustomizeTheme: React.SFC<CustomizeThemeProps> = () => {
     lineHeights,
     fontWeights,
     letterSpacings,
-    fontSizes
+    fontSizes,
+    textsFontFamily
   }
   const [demoTheme, setDemoTheme] = React.useState({
     colors,
@@ -75,28 +77,16 @@ export const CustomizeTheme: React.SFC<CustomizeThemeProps> = () => {
       }
     }))
   }
-  const updateThemeTypography = (newThemeTypography: {
-    fonts: object
-    fontFaces: object
-  }) => {
+  const updateThemeTypography = (newThemeTypography: any) => {
     console.log('newThemeTypography: ', newThemeTypography)
-    // const { fonts: newFonts, fontFaces: newFontFaces } = newThemeTypography
-    // const newTypography = {
-    //   ...fonts,
-    //   ...fontFaces,
-    //   ...newFonts,
-    //   ...newFontFaces
-    // }
-    // setDemoTheme((demoThemeValues: any) => ({
-    //   ...demoThemeValues,
-    //   ...newTypography
-    // }))
+
+    setDemoTheme((demoThemeValues: any) => ({
+      ...demoThemeValues,
+      ...newThemeTypography
+    }))
   }
 
   React.useEffect(() => {
-    // if (!demoTheme && customTheme) {
-    //   setDemoTheme(customTheme)
-    // }
     if (demoTheme && Object.keys(demoTheme).length) {
       updateCustomTheme(demoTheme)
     }
@@ -107,9 +97,6 @@ export const CustomizeTheme: React.SFC<CustomizeThemeProps> = () => {
   }, [customTheme])
 
   React.useEffect(() => {
-    // if (!demoTheme && customTheme) {
-    //   setDemoTheme(customTheme)
-    // }
     if (fileData && fileData.length) {
       setFileDataURI(
         `data:application/json;charset=utf-8,${encodeURIComponent(fileData)}`

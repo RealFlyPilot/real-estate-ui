@@ -25,6 +25,7 @@ export interface CustomizeThemeTypographyProps {
   lineHeights: T_BaseTheme['lineHeights']
   fontWeights: T_BaseTheme['fontWeights']
   letterSpacings: T_BaseTheme['letterSpacings']
+  textsFontFamily?: T_BaseTheme['textsFontFamily']
   updateThemeTypography: Function
 }
 
@@ -39,7 +40,18 @@ export const CustomizeThemeTypography: React.SFC<CustomizeThemeTypographyProps> 
   lineHeights,
   fontWeights,
   letterSpacings,
-  updateThemeTypography
+  updateThemeTypography,
+  textsFontFamily = {
+    h0: 'welcome-font',
+    h1: 'welcome-font',
+    h2: 'welcome-font',
+    h3: 'welcome-font',
+    h4: 'welcome-font',
+    h5: 'welcome-font',
+    h6: 'welcome-font',
+    subtitle1: 'welcome-font',
+    subtitle2: 'welcome-font'
+  }
 }) => {
   const [
     customTypographySettings,
@@ -55,7 +67,7 @@ export const CustomizeThemeTypography: React.SFC<CustomizeThemeTypographyProps> 
     lineHeights,
     fontWeights,
     letterSpacings,
-    updateThemeTypography
+    textsFontFamily
   })
 
   const updateCustomTypographySettings = (typographySettings) => {
@@ -214,11 +226,29 @@ export const CustomizeThemeTypography: React.SFC<CustomizeThemeTypographyProps> 
     }
   }, [data])
 
-  const saveCustomSettings = () => {
-    alert('saving custom settings')
-    updateThemeTypography(customTypographySettings)
-  }
   React.useEffect(() => {
+    if (themeFonts) {
+      console.log('themeFonts: ', themeFonts)
+      console.log(
+        'customTypographySettings.fonts: ',
+        customTypographySettings.fonts
+      )
+      const newFontFamilies = {
+        h0: themeFonts.headings,
+        h1: themeFonts.headings,
+        h2: themeFonts.headings,
+        h3: themeFonts.headings,
+        h4: themeFonts.headings,
+        h5: themeFonts.headings,
+        h6: themeFonts.headings,
+        subtitle1: themeFonts.headings,
+        subtitle2: themeFonts.headings
+      }
+      updateCustomTypographySettings({
+        fonts: themeFonts,
+        textsFontFamily: newFontFamilies
+      })
+    }
     if (themeDefaultLineHeight) {
       updateCustomTypographySettings({
         defaultLineHeight: themeDefaultLineHeight
@@ -256,10 +286,16 @@ export const CustomizeThemeTypography: React.SFC<CustomizeThemeTypographyProps> 
     themeHeadingLineHeight,
     themeHeadingLetterSpacing,
     themeLineHeights,
-    themeLetterSpacings
+    themeLetterSpacings,
+    themeFonts
   ])
 
   // ============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================== //
+
+  const saveCustomSettings = () => {
+    console.log('customTypographySettings: ', customTypographySettings)
+    updateThemeTypography(customTypographySettings)
+  }
 
   return (
     <Accordion
