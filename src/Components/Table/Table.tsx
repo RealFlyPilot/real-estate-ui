@@ -1,20 +1,37 @@
 import * as React from 'react'
-import { T_BaseComponentStyleProps } from '../component.types'
+import { T_BaseComponentStyleProps, T_StatusVariant } from '../component.types'
 import { Table as BaseTable } from '@welcome-ui/table'
 
-export interface TableProps extends T_BaseComponentStyleProps {}
+export interface TableRowProps extends T_BaseComponentStyleProps {
+  variant?: T_StatusVariant
+  children?: any
+}
 
-export const Table: React.SFC<TableProps> = (props) => {
+const TableRow: React.SFC<TableRowProps> = (props) => (
+  <BaseTable.Tr {...props} />
+)
+
+export interface TableProps extends T_BaseComponentStyleProps {
+  indent?: boolean
+  children?: any
+}
+
+export interface TableInterface extends React.SFC<TableProps> {
+  Thead: React.SFC<TableProps>
+  Tbody: React.SFC<TableProps>
+  Tr: React.SFC<TableRowProps>
+  Th: React.SFC<TableProps>
+  Td: React.SFC<TableProps>
+}
+
+const Table: TableInterface = (props) => {
   return <BaseTable {...props} />
 }
 
-// @ts-ignore
 Table.Thead = BaseTable.Thead
-// @ts-ignore
 Table.Tbody = BaseTable.Tbody
-// @ts-ignore
-Table.Tr = BaseTable.Tr
-// @ts-ignore
+Table.Tr = TableRow
 Table.Th = BaseTable.Th
-// @ts-ignore
 Table.Td = BaseTable.Td
+
+export { Table }
