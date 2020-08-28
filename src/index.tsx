@@ -47,8 +47,7 @@ import { baseTheme } from './Theme/base.theme'
 import { welcomeTheme } from './Theme/welcome.theme'
 import { darkTheme } from './Theme/dark.theme'
 import { Code } from './Utils/Code'
-import { Form } from './Components/Form/Form'
-import { CustomizeTheme } from './Compositions/CustomizeTheme'
+import { Form, useForm } from './Components/Form/Form'
 import { SidebarLayout } from './Layouts/SidebarLayout'
 import { CustomizeThemePalette } from './Compositions/CustomizeThemePalette/CustomizeThemePalette'
 import { CustomizeThemeSpacing } from './Compositions/CustomizeThemeSpacing'
@@ -61,6 +60,7 @@ export {
   Box,
   Hint,
   Form,
+  useForm,
   Card,
   Stack,
   Button,

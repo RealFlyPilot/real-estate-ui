@@ -25,7 +25,7 @@ export const CustomizeTheme: React.SFC<CustomizeThemeProps> = () => {
 
   const {
     space,
-    colors,
+    colors: originalPaletteColors,
     fonts,
     // fontFaces,
     defaultLineHeight,
@@ -38,7 +38,12 @@ export const CustomizeTheme: React.SFC<CustomizeThemeProps> = () => {
     fontSizes,
     textsFontFamily
   } = customTheme
-
+  const { primary, danger, success } = originalPaletteColors
+  const colors = {
+    primary,
+    danger,
+    success
+  }
   const typographyProps = {
     fonts,
     // fontFaces, having issues with updating this field properly
@@ -59,10 +64,10 @@ export const CustomizeTheme: React.SFC<CustomizeThemeProps> = () => {
   })
 
   const updateThemePalette = (newPaletteValues: any) => {
-    console.log('newPaletteValues: ', newPaletteValues)
     setDemoTheme((demoTheme) => ({
       ...demoTheme,
       colors: {
+        ...demoTheme.colors,
         ...colors,
         ...newPaletteValues
       }
@@ -78,8 +83,6 @@ export const CustomizeTheme: React.SFC<CustomizeThemeProps> = () => {
     }))
   }
   const updateThemeTypography = (newThemeTypography: any) => {
-    console.log('newThemeTypography: ', newThemeTypography)
-
     setDemoTheme((demoThemeValues: any) => ({
       ...demoThemeValues,
       ...newThemeTypography

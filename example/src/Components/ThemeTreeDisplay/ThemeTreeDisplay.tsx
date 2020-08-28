@@ -14,7 +14,6 @@ export const ThemeTreeDisplay: React.SFC<ThemeTreeDisplayProps> = ({
 }) => {
   const { customTheme } = useThemeContext()
   const { tree }: any = formatThemeTree(customTheme, allowedCustomizationKeys)
-  console.log('tree: ', tree)
 
   const [data, setData]: any = useState(tree)
   const [cursor, setCursor]: any = useState(null)

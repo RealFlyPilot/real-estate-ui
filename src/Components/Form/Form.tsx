@@ -6,6 +6,7 @@
 import React from 'react'
 import { Form as FinalForm } from 'react-final-form'
 import { Code } from '../../Utils/Code'
+export { useForm } from 'react-hook-form'
 
 // eslint-disable-next-line react/prop-types
 export const Form = ({ children, initialValues, validate }: any) => (
@@ -19,6 +20,11 @@ export const Form = ({ children, initialValues, validate }: any) => (
     )}
   </FinalForm>
 )
+
+export interface HookFormProps {
+  submitHandler: Function
+  children: any
+}
 
 export const getFormValues = (node) =>
   node.querySelector('pre')

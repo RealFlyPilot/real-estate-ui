@@ -7,6 +7,7 @@ import { Accordion } from '../../Components/Accordion'
 import { Box } from '../../Components/Box'
 import { Stack } from '../../Components/Stack'
 import { Text } from '../../Components/Text'
+import { Card } from '../../Components/Card'
 import { PiechartIcon } from '../../Components/Icon'
 
 export interface CustomizeThemePaletteProps {
@@ -16,7 +17,7 @@ export interface CustomizeThemePaletteProps {
 
 export const CustomizeThemePalette: React.SFC<CustomizeThemePaletteProps> = React.forwardRef(
   ({ colors, updateThemePalette }, ref) => {
-    const { underline, overlay, ...colorPalettes } = colors
+    const colorPalettes = colors
     const [palette, setPalette] = React.useState(colors)
     const [color, setColor] = React.useState('')
     const [activePalette, setActivePalette]: any = React.useState(null)
@@ -59,24 +60,32 @@ export const CustomizeThemePalette: React.SFC<CustomizeThemePaletteProps> = Reac
                 {Object.keys(nestedPalette).map((key) => {
                   const nestedPaletteColor = nestedPalette[key]
                   return (
-                    <Box backgroundColor='light.900'>
-                      <Modal.Trigger as={Box} {...modal}>
-                        <Shape
-                          width='100px'
-                          height='100px'
-                          shape='circle'
-                          onClick={() => {
-                            setColor(nestedPaletteColor)
-                            setActivePalette(`${paletteKey}.${key}`)
-                          }}
-                          backgroundColor={nestedPaletteColor}
-                        >
-                          <Text color='light.900'>
-                            {colorPalettes[paletteKey][key]}
-                          </Text>
-                        </Shape>
-                      </Modal.Trigger>
-                    </Box>
+                    <Card p={16}>
+                      <Stack alignItems='center' alignContent='center'>
+                        <Box backgroundColor='light.900'>
+                          <Modal.Trigger as={Box} {...modal}>
+                            <Shape
+                              width='100px'
+                              height='100px'
+                              shape='circle'
+                              onClick={() => {
+                                setColor(nestedPaletteColor)
+                                setActivePalette(`${paletteKey}.${key}`)
+                              }}
+                              backgroundColor={nestedPaletteColor}
+                            >
+                              <Text color='light.900'>
+                                {colorPalettes[paletteKey][key]}
+                              </Text>
+                            </Shape>
+                          </Modal.Trigger>
+                        </Box>
+
+                        <Text as='h3' fontWeight='bold'>
+                          {key}
+                        </Text>
+                      </Stack>
+                    </Card>
                   )
                 })}
               </Stack>

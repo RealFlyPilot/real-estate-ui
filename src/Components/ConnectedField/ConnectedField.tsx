@@ -24,8 +24,11 @@ export interface ConnectedFieldProps extends T_BaseComponentStyleProps {
   isEditable?: boolean
   id?: string
   value?: any
+  ref?: any
 }
 
-export const ConnectedField: React.SFC<ConnectedFieldProps> = (props) => {
-  return <BaseField {...props} />
-}
+export const ConnectedField: React.SFC<ConnectedFieldProps> = React.forwardRef(
+  (props, ref) => {
+    return <BaseField {...props} ref={ref} />
+  }
+)

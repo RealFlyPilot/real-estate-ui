@@ -62,17 +62,17 @@ export type T_SubPalette = {
 }
 
 export type T_ThemeColors = {
-  primary: T_PrimaryPalette
-  success: T_SuccessPalette
-  danger: T_DangerPalette
-  warning: T_WarningPalette
-  info: T_InfoPalette
-  light: T_LightPalette
-  dark: T_DarkPalette
-  nude: T_NudePalette
-  sub: T_SubPalette
-  underline: string
-  overlay: string
+  primary?: T_PrimaryPalette
+  success?: T_SuccessPalette
+  danger?: T_DangerPalette
+  warning?: T_WarningPalette
+  info?: T_InfoPalette
+  light?: T_LightPalette
+  dark?: T_DarkPalette
+  nude?: T_NudePalette
+  sub?: T_SubPalette
+  underline?: string
+  overlay?: string
 }
 
 export type T_ThemeSpacing = {

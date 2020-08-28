@@ -126,7 +126,7 @@ export const CustomizeThemeTypography: React.SFC<CustomizeThemeTypographyProps> 
     setThemeDefaultLetterSpacing
   ] = React.useState(defaultLetterSpacing)
   const updateThemeDefaultLetterSpacing = ({ target: { value } }) => {
-    setThemeDefaultLetterSpacing(parseInt(value) || 0)
+    setThemeDefaultLetterSpacing(value) // parseInt(value) || 0
   }
 
   // ============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================== //
@@ -136,7 +136,7 @@ export const CustomizeThemeTypography: React.SFC<CustomizeThemeTypographyProps> 
   )
   const updateThemeHeadingLineheight = ({ target: { value } }) => {
     if (value) {
-      setThemeHeadingLineHeight(parseInt(value) || 0)
+      setThemeHeadingLineHeight(value) // parseInt(value) || 0
       // setHeadingsFontUpdated(true)
     }
   }
@@ -162,7 +162,7 @@ export const CustomizeThemeTypography: React.SFC<CustomizeThemeTypographyProps> 
   const updateThemeLetterSpacings = ({ target: { value, name } }) => {
     setThemeLetterSpacings((themeLetterSpacings) => ({
       ...themeLetterSpacings,
-      [name]: parseInt(value) || 0
+      [name]: value // parseInt(value) || 0
     }))
   }
 
@@ -172,7 +172,7 @@ export const CustomizeThemeTypography: React.SFC<CustomizeThemeTypographyProps> 
   const updateThemeLineHeights = ({ target: { value, name } }) => {
     setThemeLineHeights((themeLineHeights) => ({
       ...themeLineHeights,
-      [name]: parseInt(value) || 0
+      [name]: value // parseInt(value) || 0
     }))
   }
 

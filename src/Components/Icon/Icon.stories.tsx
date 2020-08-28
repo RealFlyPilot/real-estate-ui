@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { icons } from './Icon'
+import * as icons from './Icon'
 import { Box } from '../Box'
 import { Stack } from '../Stack'
 import { Text } from '../Text'
